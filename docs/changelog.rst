@@ -4,7 +4,7 @@ Changelog
 
 All commits to this project will be documented in this file.
 
-[unreleased]
+`[0.2.0] - 2023-06-25 <https://github.com/JacobCoffee/niapi/releases/tag/v0.2.0>`_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Bug Fixes
@@ -30,6 +30,7 @@ Features
 * (`93fe748 <https://github.com/JacobCoffee/niapi/commit/93fe74805e83de71805c8181a35c8ca4a8a8c3a4>`_)  - Adds basic scaffolding (Jacob Coffee)
 * (`667fda2 <https://github.com/JacobCoffee/niapi/commit/667fda29775ab01201d8044b69c1c92d73a61d4e>`_)  - Style updates (Jacob Coffee)
 * (`058a0c7 <https://github.com/JacobCoffee/niapi/commit/058a0c719a4531884cca4a28978e3884e30ff957>`_)  - Style updates (Jacob Coffee)
+* (`82aeba5 <https://github.com/JacobCoffee/niapi/commit/82aeba5e354f91ee3a07bfc2a52c97804a1f2321>`_)  - Introduce changelog and doc styling (Jacob Coffee)
 
 Ci
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -38,5 +39,10 @@ Ci
 * (`988659d <https://github.com/JacobCoffee/niapi/commit/988659d7944ad90d617360261e04e38325ddd0cf>`_)  - Update ci name (Jacob Coffee)
 * (`ad08c17 <https://github.com/JacobCoffee/niapi/commit/ad08c17c395670fbb7f23a1644d2b8f1e904037e>`_)  - Update ci name (Jacob Coffee)
 * (`0596b7c <https://github.com/JacobCoffee/niapi/commit/0596b7cb2c97cf2c58b2e8900acafa183b3bcf87>`_)  - Full pre-commit passing (Jacob Coffee)
+
+Release
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`4cd39be <https://github.com/JacobCoffee/niapi/commit/4cd39be2c0321464e4273548048bb9f44fc2c47f>`_)  - Version v0.2.0 (Jacob Coffee)
 
 Network Information API Changelog
