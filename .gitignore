@@ -103,3 +103,4 @@ cython_debug/
 coverage.*
 setup.py
 !/niapi/lib/
+!/tests/**/lib/
