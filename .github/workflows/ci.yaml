@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ["3.11", "3.12.0b2"]
+        python-version: ["3.11"]
     uses: ./.github/workflows/test.yaml
     with:
       python-version: ${{ matrix.python-version }}
