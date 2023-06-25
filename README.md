@@ -37,6 +37,7 @@
 - [Contributors](#contributors)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Screenshots](#screenshots)
 
 ## About
 
@@ -95,3 +96,9 @@ tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resource
 - Built on Litestar and Pydantic
 - Using https://feathericons.dev/
 - Using TailwindCSS
+
+## Screenshots
+
+[//]: # (TODO)
+
+![img.png](docs/images/index.png)
