@@ -4,273 +4,271 @@
 <form id="calculator" method="post">
   <div class="space-y-12">
     <div class="border-b border-gray-900/10 pb-12">
-      <div class="border-b border-gray-900/10 pb-12">
-        <h2
-          class="text-base font-semibold leading-7 text-gray-900 dark:text-neutral-200"
-        >
-          Calculator
-        </h2>
-        <p class="mt-1 text-sm leading-6 text-gray-600 dark:text-neutral-300">
-          Calculate the IP subnet.
-        </p>
+      <h2
+        class="text-base font-semibold leading-7 text-gray-900 dark:text-neutral-200"
+      >
+        Calculator
+      </h2>
+      <p class="mt-1 text-sm leading-6 text-gray-600 dark:text-neutral-300">
+        Calculate the IP subnet.
+      </p>
 
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div class="sm:col-span-3">
-            <label
-              for="ip"
-              class="block text-sm font-medium leading-6 text-gray-900 dark:text-neutral-200"
-              >IP</label
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label
+            for="ip"
+            class="block text-sm font-medium leading-6 text-gray-900 dark:text-neutral-200"
+            >IP</label
+          >
+          <div class="mt-2">
+            <div
+              class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-neutral-800 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-400 dark:focus-within:ring-blue-800 sm:max-w-md"
             >
-            <div class="mt-2">
-              <div
-                class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-neutral-800 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-400 dark:focus-within:ring-blue-800 sm:max-w-md"
-              >
-                <input
-                  type="text"
-                  name="ip"
-                  id="ip"
-                  autocomplete="ip"
-                  pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
-                  class="block w-full rounded-md border-0 bg-transparent py-1.5 text-gray-900 dark:text-neutral-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 dark:placeholder-neutral-500 focus:ring-2 focus:ring-inset focus:ring-blue-400 dark:focus:ring-blue-800 sm:text-sm sm:leading-6"
-                  placeholder="10.200.23.42"
-                />
-              </div>
+              <input
+                type="text"
+                name="ip"
+                id="ip"
+                autocomplete="ip"
+                pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+                class="block w-full rounded-md border-0 bg-transparent py-1.5 text-gray-900 dark:text-neutral-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 dark:placeholder-neutral-500 focus:ring-2 focus:ring-inset focus:ring-blue-400 dark:focus:ring-blue-800 sm:text-sm sm:leading-6"
+                placeholder="10.200.23.42"
+              />
             </div>
           </div>
+        </div>
 
-          <div class="sm:col-span-3">
-            <label
-              for="cidr"
-              class="block text-sm font-medium leading-6 text-gray-900 dark:text-neutral-200"
-              >CIDR</label
+        <div class="sm:col-span-3">
+          <label
+            for="cidr"
+            class="block text-sm font-medium leading-6 text-gray-900 dark:text-neutral-200"
+            >CIDR</label
+          >
+          <div class="mt-2">
+            <div
+              class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-neutral-800 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-400 dark:focus-within:ring-blue-800 sm:max-w-md"
             >
-            <div class="mt-2">
-              <div
-                class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-neutral-800 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-400 dark:focus-within:ring-blue-800 sm:max-w-md"
+              <span
+                id="ipdisplay"
+                class="flex select-none items-center pl-3 text-gray-900/60 dark:text-neutral-200/80 sm:text-sm"
+                >10.200.23.42/</span
               >
-                <span
-                  id="ipdisplay"
-                  class="flex select-none items-center pl-3 text-gray-900/60 dark:text-neutral-200/80 sm:text-sm"
-                  >10.200.23.42/</span
-                >
-                <input
-                  type="number"
-                  name="cidr"
-                  id="cidr"
-                  autocomplete="cidr"
-                  min="0"
-                  max="32"
-                  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 dark:text-neutral-200 placeholder:text-gray-400 dark:placeholder-neutral-500 focus:ring-0 sm:text-sm sm:leading-6 focus:ring-blue-400 dark:focus:ring-blue-800"
-                  placeholder="26"
-                />
-              </div>
+              <input
+                type="number"
+                name="cidr"
+                id="cidr"
+                autocomplete="cidr"
+                min="0"
+                max="32"
+                class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 dark:text-neutral-200 placeholder:text-gray-400 dark:placeholder-neutral-500 focus:ring-0 sm:text-sm sm:leading-6 focus:ring-blue-400 dark:focus:ring-blue-800"
+                placeholder="26"
+              />
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="border-b border-gray-900/10 pb-12">
-        <h2
-          class="text-base font-semibold leading-7 text-gray-900 dark:text-neutral-200"
-        >
-          Options
-        </h2>
-        <p class="mt-1 text-sm leading-6 text-gray-900 dark:text-neutral-200">
-          Configure the output.
-        </p>
+    <div class="border-b border-gray-900/10 pb-12">
+      <h2
+        class="text-base font-semibold leading-7 text-gray-900 dark:text-neutral-200"
+      >
+        Options
+      </h2>
+      <p class="mt-1 text-sm leading-6 text-gray-900 dark:text-neutral-200">
+        Configure the output.
+      </p>
 
-        <div class="mt-10 space-y-10">
-          <fieldset>
-            <legend
-              class="text-sm font-semibold leading-6 text-gray-900 dark:text-neutral-200"
-            >
-              Options
-            </legend>
-            <div class="mt-6 grid grid-cols-2 gap-4">
-              <div class="space-y-6">
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checksubnet"
-                      name="checksubnet"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checksubnet"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Subnet Mask</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the subnet mask.
-                    </p>
-                  </div>
+      <div class="mt-10 space-y-10">
+        <fieldset>
+          <legend
+            class="text-sm font-semibold leading-6 text-gray-900 dark:text-neutral-200"
+          >
+            Options
+          </legend>
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <div class="space-y-6">
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checksubnet"
+                    name="checksubnet"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
                 </div>
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checkwildcardsubnet"
-                      name="checkwildcardsubnet"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checkwildcardsubnet"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Wildcard Subnet Mask</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the wildcard subnet mask
-                    </p>
-                  </div>
-                </div>
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checktotalips"
-                      name="checktotalips"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checktotalips"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Total IPs</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the count of total IP addresses
-                    </p>
-                  </div>
-                </div>
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checkusableips"
-                      name="checkusableips"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checkusableips"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Usable IPs</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the count of usable IP addresses
-                    </p>
-                  </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checksubnet"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Subnet Mask</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the subnet mask.
+                  </p>
                 </div>
               </div>
-              <div class="space-y-6">
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checknetworkip"
-                      name="checknetworkip"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checknetworkip"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Network IP</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the network IP address
-                    </p>
-                  </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checkwildcardsubnet"
+                    name="checkwildcardsubnet"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
                 </div>
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checkgatewayip"
-                      name="checkgatewayip"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checkgatewayip"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Gateway IP</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the gateway IP address
-                    </p>
-                  </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checkwildcardsubnet"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Wildcard Subnet Mask</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the wildcard subnet mask
+                  </p>
                 </div>
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checkbroadcastip"
-                      name="checkbroadcastip"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checkbroadcastip"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >Broadcast IP</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the broadcast IP address
-                    </p>
-                  </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checktotalips"
+                    name="checktotalips"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
                 </div>
-                <div class="relative flex gap-x-3">
-                  <div class="flex h-6 items-center">
-                    <input
-                      id="checkfirstlastip"
-                      name="checkfirstlastip"
-                      type="checkbox"
-                      class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
-                    />
-                  </div>
-                  <div class="text-sm leading-6">
-                    <label
-                      for="checkfirstlastip"
-                      class="font-medium text-gray-900 dark:text-neutral-200"
-                      >First and Last IP</label
-                    >
-                    <p class="text-gray-900 dark:text-neutral-200">
-                      Get the first and last IP address
-                    </p>
-                  </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checktotalips"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Total IPs</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the count of total IP addresses
+                  </p>
+                </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checkusableips"
+                    name="checkusableips"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checkusableips"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Usable IPs</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the count of usable IP addresses
+                  </p>
                 </div>
               </div>
             </div>
-          </fieldset>
-        </div>
+            <div class="space-y-6">
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checknetworkip"
+                    name="checknetworkip"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checknetworkip"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Network IP</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the network IP address
+                  </p>
+                </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checkgatewayip"
+                    name="checkgatewayip"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checkgatewayip"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Gateway IP</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the gateway IP address
+                  </p>
+                </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checkbroadcastip"
+                    name="checkbroadcastip"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checkbroadcastip"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >Broadcast IP</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the broadcast IP address
+                  </p>
+                </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="checkfirstlastip"
+                    name="checkfirstlastip"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label
+                    for="checkfirstlastip"
+                    class="font-medium text-gray-900 dark:text-neutral-200"
+                    >First and Last IP</label
+                  >
+                  <p class="text-gray-900 dark:text-neutral-200">
+                    Get the first and last IP address
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
     </div>
+  </div>
 
-    <div class="mt-6 flex items-center justify-end gap-x-6">
-      <button
-        type="button"
-        class="rounded-md bg-white hover:bg-red-400 px-3 py-2 text-sm font-semibold text-neutral-900 hover:text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-      >
-        Reset
-      </button>
-      <button
-        type="submit"
-        class="rounded-md bg-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
-      >
-        Save
-      </button>
-    </div>
+  <div class="mt-6 flex items-center justify-end gap-x-6">
+    <button
+      type="button"
+      class="rounded-md bg-white hover:bg-red-400 px-3 py-2 text-sm font-semibold text-neutral-900 hover:text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+    >
+      Reset
+    </button>
+    <button
+      type="submit"
+      class="rounded-md bg-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
+    >
+      Save
+    </button>
   </div>
 </form>
 
