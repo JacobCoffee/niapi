@@ -18,7 +18,7 @@ body = """
     {% if previous.commit_id %}
         `{{ previous.commit_id | truncate(length=7, end="") }} <https://github.com/JacobCoffee/niapi/commit/{{ previous.commit_id }}>`_ ... \
             `{{ commit_id | truncate(length=7, end="") }} <https://github.com/JacobCoffee/niapi/commit/{{ commit_id }}>`_ \
-            | `See diff for {{ version | trim_start_matches(pat="v") }} <https://github.com/litestar-org/litestar/compare/{{ previous.commit_id }}...{{ commit_id }}>`_
+            | `See diff for {{ version | trim_start_matches(pat="v") }} <https://github.com/JacobCoffee/niapi/compare/{{ previous.commit_id }}...{{ commit_id }}>`_
     {% endif %}\
 {% endif %}\
 {% for group, commits in commits | group_by(attribute="group") %}
