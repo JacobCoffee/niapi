@@ -17,7 +17,7 @@ Code contributions
 Workflow
 ++++++++
 
-1. `Fork <https://github.com/JacobCoffee/niapi/fork>`_ the `Litestar repository <https://github.com/JacobCoffee/niapi>`_
+1. `Fork <https://github.com/JacobCoffee/niapi/fork>`_ the `NIAPI repository <https://github.com/JacobCoffee/niapi>`_
 2. Clone your fork locally with git
 3. `Set up the environment <#setting-up-the-environment>`_
 4. Make your changes
