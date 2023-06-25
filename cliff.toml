@@ -7,8 +7,9 @@ All commits to this project will be documented in this file.\n
 """
 body = """
 {% if version %}\
-    `[{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }} <https://github.com/JacobCoffee/niapi/releases/tag/v{{ version | trim_start_matches(pat="v") }}>`_
+    `Release [v{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }} <https://github.com/JacobCoffee/niapi/releases/tag/v{{ version | trim_start_matches(pat="v") }}>`_
     ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    * `See All commits in v{{ version | trim_start_matches(pat="v") }} <https://github.com/JacobCoffee/niapi/commits/v{{ version | trim_start_matches(pat="v") }}>`_
 {% else %}\
     [unreleased]
     ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
