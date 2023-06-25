@@ -36,6 +36,8 @@ jobs:
       integration: ${{ matrix.python-version == '3.11' }}
 
   test-platform-compat:
+    env:
+      SECRET_KEY: "ThisIsABadSecret"
     if: github.event_name == 'push'
     strategy:
       fail-fast: true
