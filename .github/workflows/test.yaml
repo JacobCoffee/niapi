@@ -63,6 +63,8 @@ jobs:
           source $VENV
           pytest
       - name: Test with coverage
+        env:
+          SECRET_KEY: "ThisIsABadSecret"
         if: inputs.coverage
         run: poetry run pytest tests --cov=niapi --cov-report=xml
       - uses: actions/upload-artifact@v3
