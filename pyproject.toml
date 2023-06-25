@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "napi"
+name = "niapi"
 version = "0.1.0"
 description = "Network Data API"
 authors = ["Jacob Coffee <jacob@z7x.org>"]
@@ -8,11 +8,11 @@ maintainers = [
 ]
 license = "MIT"
 readme = "docs/PYPI_README.md"
-homepage = "https://github.com/JacobCoffee/napi"
-repository = "https://github.com/JacobCoffee/napi"
-documentation = "https://jacobcoffee.github.io/napi/index.html"
+homepage = "https://github.com/JacobCoffee/niapi"
+repository = "https://github.com/JacobCoffee/niapi"
+documentation = "https://jacobcoffee.github.io/niapi/index.html"
 keywords = [
-    "napi",
+    "niapi",
     "network",
     "api",
     "tool",
@@ -49,11 +49,11 @@ classifiers = [
     "Topic :: System :: Networking",
 ]
 include = ["CHANGELOG.rst"]
-packages = [{ include = "napi" }]
+packages = [{ include = "niapi" }]
 
 [tool.poetry.urls]
-"Issue Tracker" = "https://github.com/JacobCoffee/napi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
-"Changelog" = "https://github.com/JacobCoffee/napi/releases/"
+"Issue Tracker" = "https://github.com/JacobCoffee/niapi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+"Changelog" = "https://github.com/JacobCoffee/niapi/releases/"
 "Twitter" = "https://twitter.com/_scriptr"
 "Reddit" = "https://www.reddit.com/u/monorepo"
 
@@ -105,4 +105,154 @@ blacken-docs = "^1.14.0"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+
+[tool.codespell]
+ignore-words-list = "selectin"
+skip = 'poetry.lock'
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unreachable = true
+warn_return_any = true
+strict = true
+disallow_untyped_decorators = true
+disallow_any_generics = false
+implicit_reexport = false
+show_error_codes = true
+
+[tool.mypy."tests.*"]
+disallow_untyped_decorators = false
+
+[tool."pydantic-mypy"]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
+
+[tool.coverage.run]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    'pragma: no cover',
+    'if TYPE_CHECKING:',
+    'except ImportError as e:',
+    'except ImportError:',
+    '\.\.\.',
+    'raise NotImplementedError',
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.slotscheck]
+strict-imports = false
+
+[tool.ruff]
+select = [
+    "A",   # flake8-builtins
+    "B",   # flake8-bugbear
+    "BLE", # flake8-blind-except
+    "C4",  # flake8-comprehensions
+    "C90", # mccabe
+    "D",   # pydocstyle
+    "DJ",  # flake8-django
+    "DTZ", # flake8-datetimez
+    "E",   # pycodestyle errors
+    "ERA", # eradicate
+    "EXE", # flake8-executable
+    "F",   # pyflakes
+    "G",   # flake8-logging-format
+    "I",   # isort
+    "ICN", # flake8-import-conventions
+    "ISC", # flake8-implicit-str-concat
+    "N",   # pep8-naming
+    "PIE", # flake8-pie
+    "PLC", # pylint - convention
+    "PLE", # pylint - error
+    "PLW", # pylint - warning
+    "PTH", # flake8-use-pathlib
+    "Q",   # flake8-quotes
+    "RET", # flake8-return
+    "RUF", # Ruff-specific rules
+    "S",   # flake8-bandit
+    "SIM", # flake8-simplify
+    "T10", # flake8-debugger
+    "T20", # flake8-print
+    "TCH", # flake8-type-checking
+    "TID", # flake8-tidy-imports
+    "UP",  # pyupgrade
+    "W",   # pycodestyle - warning
+    "YTT", # flake8-2020
+]
+ignore = [
+    "A003",    # flake8-builtins - class attribute {name} is shadowing a python builtin
+    "B010",    # flake8-bugbear - do not call setattr with a constant attribute value
+    "D100",    # pydocstyle - missing docstring in public module
+    "D101",    # pydocstyle - missing docstring in public class
+    "D102",    # pydocstyle - missing docstring in public method
+    "D103",    # pydocstyle - missing docstring in public function
+    "D104",    # pydocstyle - missing docstring in public package
+    "D105",    # pydocstyle - missing docstring in magic method
+    "D106",    # pydocstyle - missing docstring in public nested class
+    "D107",    # pydocstyle - missing docstring in __init__
+    "D202",    # pydocstyle - no blank lines allowed after function docstring
+    "D205",    # pydocstyle - 1 blank line required between summary line and description
+    "D415",    # pydocstyle - first line should end with a period, question mark, or exclamation point
+    "E501",    # pycodestyle line too long, handled by black
+    "PLW2901", # pylint - for loop variable overwritten by assignment target
+]
+line-length = 120
+src = ["niapi", "tests", "docs/examples"]
+target-version = "py38"
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.mccabe]
+max-complexity = 12
+
+[tool.ruff.pep8-naming]
+classmethod-decorators = [
+    "classmethod",
+    "pydantic.root_validator",
+    "pydantic.validator",
+]
+
+[tool.ruff.isort]
+known-first-party = ["niapi", "tests"]
+
+[tool.ruff.per-file-ignores]
+"tests/**/*.*" = [
+    "A",
+    "ARG",
+    "B",
+    "BLE",
+    "C901",
+    "D",
+    "DTZ",
+    "EM",
+    "FBT",
+    "G",
+    "N",
+    "PGH",
+    "PIE",
+    "PLR",
+    "PLW",
+    "PTH",
+    "RSE",
+    "S",
+    "S101",
+    "SIM",
+    "TCH",
+    "TRY",
+]
+"docs/**/*.*" = ["S", "B", "DTZ", "A", "TCH", "ERA", "D", "RET"]
+"tools/**/*.*" = ["D", "ARG", "EM", "TRY", "G", "FBT"]
 

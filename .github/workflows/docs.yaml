@@ -1,0 +1,36 @@
+name: Documentation Building
+on:
+  release:
+    types: [published]
+jobs:
+  docs:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: false
+          installer-parallel: true
+          virtualenvs-in-project: true
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ hashFiles('**/poetry.lock') }}
+      - name: Install App Dependencies
+        run: poetry install --no-interaction --with docs
+      - name: Fetch gh pages
+        run: git fetch origin gh-pages --depth=1
+      - name: Build docs
+        run: poetry run python tools/build_docs.py docs-build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs-build

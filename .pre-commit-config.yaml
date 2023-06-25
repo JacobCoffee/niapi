@@ -4,14 +4,27 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
+      - id: check-added-large-files
       - id: check-ast
       - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
       - id: check-toml
       - id: debug-statements
-        exclude: "litestar/middleware/exceptions/middleware.py"
+      - id: detect-private-key
       - id: end-of-file-fixer
+      - id: fix-encoding-pragma
       - id: mixed-line-ending
       - id: trailing-whitespace
+        args: [--remove]
+      - id: check-yaml
+        args: [--unsafe]
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.3.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
   - repo: https://github.com/python-poetry/poetry
     rev: "1.5.0"
     hooks:
@@ -32,7 +45,7 @@ repos:
     rev: v2.2.5
     hooks:
       - id: codespell
-        exclude: "tests/openapi/typescript_converter/test_converter"
+        exclude: "tests/openiapi/typescript_converter/test_converter"
   - repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:
@@ -62,127 +75,23 @@ repos:
     rev: "v1.4.0"
     hooks:
       - id: mypy
-        exclude: "test_apps|tools|docs|tests/examples|tests/docker_service_fixtures"
+        exclude: "tools|docs"
         additional_dependencies:
           [
-            "polyfactory>=2.3.2",
-            aiosqlite,
-            annotated_types,
-            async_timeout,
-            asyncmy,
-            asyncpg,
-            asyncpg_stubs,
-            attrs,
-            beanie,
-            beautifulsoup4,
-            brotli,
-            cattrs,
             click,
-            fakeredis>=2.10.2,
-            fast-query-parsers,
-            freezegun,
-            fsspec,
-            httpx,
             hypothesis,
             jsbeautifier,
-            mako,
-            mongomock_motor,
-            msgspec,
-            multidict,
             opentelemetry-instrumentation-asgi,
             opentelemetry-sdk,
-            oracledb,
-            piccolo,
-            picologging,
-            psycopg,
             pydantic,
             pytest,
             pytest-lazy-fixture,
             pytest-mock,
             pytest_docker,
             python-dotenv,
-            python-jose,
-            pytimeparse,
-            pyyaml,
             rich,
             rich-click,
-            sqlalchemy>=2.0.12,
-            starlette,
             structlog,
-            tortoise-orm,
-            types-beautifulsoup4,
-            types-freezegun,
-            types-python-dateutil,
-            types-pyyaml,
-            types-redis,
             uvicorn,
             prometheus_client,
           ]
-  - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.315
-    hooks:
-      - id: pyright
-        exclude: "test_apps|tools|docs|_openapi|tests/examples|tests/docker_service_fixtures"
-        additional_dependencies:
-          [
-            "polyfactory>=2.3.2",
-            aiosqlite,
-            annotated_types,
-            async_timeout,
-            asyncmy,
-            asyncpg,
-            asyncpg_stubs,
-            attrs,
-            beanie,
-            beautifulsoup4,
-            brotli,
-            cattrs,
-            click,
-            fakeredis>=2.10.2,
-            fast-query-parsers,
-            freezegun,
-            fsspec,
-            httpx,
-            hypothesis,
-            jsbeautifier,
-            mako,
-            mongomock_motor,
-            msgspec,
-            multidict,
-            opentelemetry-instrumentation-asgi,
-            opentelemetry-sdk,
-            oracledb,
-            piccolo,
-            picologging,
-            psycopg,
-            pydantic,
-            pytest,
-            pytest-lazy-fixture,
-            pytest-mock,
-            pytest_docker,
-            python-dotenv,
-            python-jose,
-            pytimeparse,
-            pyyaml,
-            rich,
-            rich-click,
-            sqlalchemy>=2.0.12,
-            starlette,
-            structlog,
-            tortoise-orm,
-            types-beautifulsoup4,
-            types-freezegun,
-            types-python-dateutil,
-            types-pyyaml,
-            types-redis,
-            uvicorn,
-            prometheus_client,
-          ]
-  - repo: local
-    hooks:
-      - id: sphinx-lint
-        name: sphinx-lint
-        language: python
-        entry: sphinx-lint
-        additional_dependencies: [sphinx-lint]
-        types: [rst]

@@ -51,9 +51,9 @@ def load_version_spec() -> VersionSpec:
 
 def build(output_dir: str, version: str | None) -> None:
     if version is None:
-        version = importlib.metadata.version("litestar").rsplit(".")[0]
+        version = importlib.metadata.version("niapi").rsplit(".")[0]
     else:
-        os.environ["_LITESTAR_DOCS_BUILD_VERSION"] = version
+        os.environ["_NIAPI_DOCS_BUILD_VERSION"] = version
 
     subprocess.run(["make", "docs"], check=True)  # noqa: S603 S607
 
@@ -72,7 +72,6 @@ def build(output_dir: str, version: str | None) -> None:
         shutil.copytree(docs_src_path, output_dir / "latest", dirs_exist_ok=True)
     shutil.copytree(docs_src_path, output_dir / version, dirs_exist_ok=True)
 
-    # copy existing versions into our output dir to preserve them when cleaning the branch
     with checkout("gh-pages"):
         for other_version in [*version_spec["versions"], "latest"]:
             other_version_path = Path(other_version)

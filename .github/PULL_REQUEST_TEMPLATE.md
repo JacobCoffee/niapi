@@ -1,14 +1,9 @@
 ### Pull Request Checklist
 
-[//]: # "Please review the [Litestar contribution guidelines](https://github.com/litestar-org/litestar/blob/main/CONTRIBUTING.rst) for this repository."
-
 - [ ] New code has 100% test coverage
+- [ ] New code if 100% typed
 - [ ] (If applicable) The prose documentation has been updated to reflect the changes introduced by this PR
 - [ ] (If applicable) The reference documentation has been updated to reflect the changes introduced by this PR
-
-[//]: # "By submitting this issue, you agree to:"
-[//]: # "- follow Litestar's [Code of Conduct](https://github.com/litestar-org/.github/blob/main/CODE_OF_CONDUCT.md)"
-[//]: # "- follow Litestar's [Contribution Guidelines](https://litestar.dev/community/contribution-guide)"
 
 ### Description
 
