@@ -170,7 +170,7 @@ exclude_lines = [
 ]
 
 [tool.pytest.ini_options]
-asyncio_mode = "auto"
+#asyncio_mode = "auto"
 
 [tool.slotscheck]
 strict-imports = false
