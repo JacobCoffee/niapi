@@ -1,20 +1,36 @@
+"""Sphinx configuration."""
+from __future__ import annotations
+
 import importlib.metadata
 import os
 
-project = "niapi"
+from dotenv import load_dotenv
+
+from niapi.metadata import __project__ as project
+
+# -- Environmental Data ------------------------------------------------------
+load_dotenv()
+
+# -- Project information -----------------------------------------------------
+project = project
 copyright = "2023, Jacob Coffee"
 author = "Jacob Coffee"
 release = os.getenv("_NIAPI_DOCS_BUILD_VERSION", importlib.metadata.version("litestar").rsplit(".")[0])
 
+# -- General configuration ---------------------------------------------------
 extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
-    "sphinx_design",
-    "auto_pytabs.sphinx_ext",
-    "tools.sphinx_ext",
+    "sphinxcontrib.mermaid",
     "sphinx_copybutton",
+    "sphinx.ext.todo",
+    "sphinx.ext.viewcode",
+    "sphinx_click",
+    "sphinx_toolbox.collapse",
+    # "sphinx_design",  # not available in 7.0
+    "sphinxcontrib.autodoc_pydantic",
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
@@ -48,18 +64,33 @@ suppress_warnings = [
     "ref.python",  # TODO: remove when https://github.com/sphinx-doc/sphinx/issues/4961 is fixed
 ]
 
+# -- Style configuration -----------------------------------------------------
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
-html_css_files = ["style.css"]
-html_show_sourcelink = False
-html_title = "Network Information API"
+html_css_files = ["css/custom.css"]
+html_show_sourcelink = True
+html_title = "Docs"
+html_favicon = "_static/badge.svg"
+html_logo = "_static/badge.svg"
 
-html_theme_options = (
-    {
-        "use_page_nav": False,
-        "github_repo_name": "niapi",
-        "logo": {
-            "link": "https://github.com/JacobCoffee/niapi",
-        },
+html_theme_options = {
+    "show_toc_level": 2,
+    "logo": {
+        "link": "https://github.com/JacobCoffee/niapi",
     },
-)
+    "navbar_align": "left",
+    "icon_links": [
+        {
+            "name": "Github",
+            "url": "https://github.com/JacobCoffee/niapi",
+            "icon": "fa-brands fa-github",
+            "type": "fontawesome",
+        },
+    ],
+    "external_links": [
+        {"name": "Dashboard", "url": os.getenv("NIAPI_URL")},
+    ],
+    "announcement": "This documentation is currently under development.",
+    "navbar_end": ["navbar-icon-links"],
+    "navbar_persistent": ["search-button", "theme-switcher"],
+}

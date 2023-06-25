@@ -19,9 +19,9 @@ Usage
 You can use the hosted web interface, or ``pip install niapi`` and use the CLI:
 
 .. code-block:: shell
-    :summary: Get the network information for 10.200.0.1 with the 26 bit mask
+    :caption: Get the network information for 10.200.0.1 with the 26 bit mask
 
-   niapi check 10.200.0.1/26
+    niapi check 10.200.0.1/26
 
 
 .. toctree::
@@ -31,3 +31,4 @@ You can use the hosted web interface, or ``pip install niapi`` and use the CLI:
 
     usage/index
     api/index
+    changelog
