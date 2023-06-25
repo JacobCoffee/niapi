@@ -1,7 +1,7 @@
 <!-- markdownlint-disable -->
 <p align="center">
-  <img src="docs/images/SVG/Transparent/logo.svg#gh-light-mode-only" alt="NIAPI Logo - Light" width="100%" height="auto" />
-  <img src="docs/images/SVG/Transparent/logo-dark.svg#gh-dark-mode-only" alt="NIAPI Logo - Dark" width="100%" height="auto" />
+  <img src="docs/images/SVG/Transparent/logo-thin.svg#gh-light-mode-only" alt="NIAPI Logo - Light" width="100%" height="auto" />
+  <img src="docs/images/SVG/Transparent/logo-dark-thin.svg#gh-dark-mode-only" alt="NIAPI Logo - Dark" width="100%" height="auto" />
 </p>
 <!-- markdownlint-restore -->
 
