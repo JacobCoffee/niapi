@@ -1,10 +1,15 @@
 name: Tests And Linting
+
 on:
   push:
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+
+env:
+  SECRET_KEY: "ThisIsABadSecret"
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -45,8 +50,6 @@ jobs:
     with:
       python-version: "3.11"
       os: ${{ matrix.os }}
-    env:
-      SECRET_KEY: "ThisIsABadSecret"
 
   sonarcloud:
     name: SonarCloud
