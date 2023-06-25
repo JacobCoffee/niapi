@@ -1,4 +1,4 @@
-name: Build
+name: Tests And Linting
 on:
   push:
     branches:
