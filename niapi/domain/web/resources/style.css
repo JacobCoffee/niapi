@@ -1439,6 +1439,31 @@ select {
   outline-color: #dc2626;
 }
 
+:is(.dark .dark\:border-neutral-300\/10) {
+  border-color: rgb(212 212 212 / 0.1);
+}
+
+:is(.dark .dark\:border-neutral-300) {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity));
+}
+
+:is(.dark .dark\:border-neutral-300\/60) {
+  border-color: rgb(212 212 212 / 0.6);
+}
+
+:is(.dark .dark\:border-neutral-300\/40) {
+  border-color: rgb(212 212 212 / 0.4);
+}
+
+:is(.dark .dark\:border-neutral-300\/20) {
+  border-color: rgb(212 212 212 / 0.2);
+}
+
+:is(.dark .dark\:border-neutral-300\/30) {
+  border-color: rgb(212 212 212 / 0.3);
+}
+
 :is(.dark .dark\:bg-blue-900) {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
