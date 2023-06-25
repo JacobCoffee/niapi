@@ -94,8 +94,8 @@ async def after_exception_hook_handler(exc: Exception, _scope: Scope) -> None:
 
 
 def exception_to_http_response(
-        request: Request[Any, Any, Any],
-        exc: ApplicationError | RepositoryError,
+    request: Request[Any, Any, Any],
+    exc: ApplicationError | RepositoryError,
 ) -> Response[ExceptionResponseContent]:
     """Transform repository exceptions to HTTP exceptions.
 

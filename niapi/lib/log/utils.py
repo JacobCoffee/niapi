@@ -51,7 +51,7 @@ class EventFilter:
                 ...,
                 EventFilter(["color_message"]),
                 ...,
-            ]
+            ],
         )
 
     """

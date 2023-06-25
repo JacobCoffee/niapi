@@ -54,10 +54,12 @@ html_css_files = ["style.css"]
 html_show_sourcelink = False
 html_title = "Network Information API"
 
-html_theme_options = {
-    "use_page_nav": False,
-    "github_repo_name": "niapi",
-    "logo": {
-        "link": "https://github.com/JacobCoffee/niapi",
-    }
-},
+html_theme_options = (
+    {
+        "use_page_nav": False,
+        "github_repo_name": "niapi",
+        "logo": {
+            "link": "https://github.com/JacobCoffee/niapi",
+        },
+    },
+)

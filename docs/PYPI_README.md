@@ -25,5 +25,4 @@
 
 # `niapi` - Network Information API
 
-[//]: # (TODO)
-
+[//]: # "TODO"

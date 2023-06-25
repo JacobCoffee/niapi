@@ -13,6 +13,6 @@ config = TemplateConfig(
     engine=settings.template.ENGINE,
 )
 """
-Template config for Network Information API.  
+Template config for Network Information API.
 See :class:`TemplateSettings <.settings.TemplateSettings>` for configuration.
 """

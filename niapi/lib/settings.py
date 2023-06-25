@@ -14,6 +14,18 @@ from pydantic import BaseSettings, SecretBytes, ValidationError, validator
 from niapi import utils
 from niapi.metadata import __version__ as version
 
+__all__ = (
+    "APISettings",
+    "AppSettings",
+    "HTTPClientSettings",
+    "LogSettings",
+    "OpenAPISettings",
+    "ServerSettings",
+    "TemplateSettings",
+    "load_settings",
+)
+
+
 load_dotenv()
 
 DEFAULT_MODULE_NAME = "niapi"
@@ -123,8 +135,8 @@ class AppSettings(BaseSettings):
 
     @validator("BACKEND_CORS_ORIGINS", pre=True, allow_reuse=True)
     def assemble_cors_origins(
-            cls,
-            value: str | list[str],
+        cls,
+        value: str | list[str],
     ) -> list[str] | str:
         """Parse a list of origins.
 
@@ -147,8 +159,8 @@ class AppSettings(BaseSettings):
 
     @validator("SECRET_KEY", pre=True, always=True, allow_reuse=True)
     def generate_secret_key(
-            cls,
-            value: SecretBytes | None,
+        cls,
+        value: SecretBytes | None,
     ) -> SecretBytes:
         """Generate a secret key.
 
@@ -266,7 +278,7 @@ class OpenAPISettings(BaseSettings):
     """Document version."""
     PATH: str = "/api"
     """Path to access the root API documentation."""
-    DESCRIPTION: str | None = f"""The Network Information API gives you, well... network information! 
+    DESCRIPTION: str | None = f"""The Network Information API gives you, well... network information!
                                   You can find out more about this project in the
                                   [docs]({os.getenv("NIAPI_URL", "http://localhost") + "docs"})."""
     SERVERS: list[dict[str, str]] = []
@@ -334,15 +346,15 @@ class HTTPClientSettings(BaseSettings):
 
 # noinspection PyShadowingNames
 def load_settings() -> (
-        tuple[
-            AppSettings,
-            APISettings,
-            OpenAPISettings,
-            TemplateSettings,
-            ServerSettings,
-            LogSettings,
-            HTTPClientSettings,
-        ]
+    tuple[
+        AppSettings,
+        APISettings,
+        OpenAPISettings,
+        TemplateSettings,
+        ServerSettings,
+        LogSettings,
+        HTTPClientSettings,
+    ]
 ):
     """Load Settings file.
 

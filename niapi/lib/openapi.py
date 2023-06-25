@@ -7,6 +7,8 @@ from litestar.openapi.spec import Contact
 
 from niapi.lib import settings
 
+__all__ = ("OverridenController",)
+
 
 class OverridenController(OpenAPIController):
     """Override the default OpenAPIController to use the configured path.

@@ -12,22 +12,25 @@ __all__ = ["create_app"]
 def create_app() -> Litestar:
     """Create ASGI application."""
 
+    from litestar import Litestar
+    from pydantic import SecretStr
+
     from niapi import domain
     from niapi.lib import (
         cors,
         exceptions,
         log,
+        openapi,
         settings,
         static_files,
         template,
-        openapi,
     )
-    from litestar import Litestar
-    from pydantic import SecretStr
 
     return Litestar(
         # Handlers
-        exception_handlers={exceptions.ApplicationError: exceptions.exception_to_http_response},
+        exception_handlers={
+            exceptions.ApplicationError: exceptions.exception_to_http_response  # type: ignore[dict-item]
+        },
         route_handlers=[*domain.routes],
         # Configs
         cors_config=cors.config,

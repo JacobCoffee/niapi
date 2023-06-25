@@ -31,12 +31,6 @@ repos:
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
-  - repo: https://github.com/python-poetry/poetry
-    rev: "1.5.0"
-    hooks:
-      - id: poetry-check
-      - id: poetry-lock
-        args: ["--no-update"]
   - repo: https://github.com/provinzkraut/unasyncd
     rev: "v0.4.0"
     hooks:
@@ -84,20 +78,22 @@ repos:
         exclude: "tools|docs"
         additional_dependencies:
           [
-            click,
-            hypothesis,
-            jsbeautifier,
-            opentelemetry-instrumentation-asgi,
-            opentelemetry-sdk,
             pydantic,
-            pytest,
-            pytest-lazy-fixture,
-            pytest-mock,
-            pytest_docker,
-            python-dotenv,
+            pylint-pydantic,
+            jinja2,
             rich,
+            click,
             rich-click,
+            polyfactory,
+            pydantic_openapi_schema,
             structlog,
+            pytest,
+            pytest-docker,
+            litestar,
+            types-click,
+            types-passlib,
+            types-click,
+            types-PyYAML,
             uvicorn,
             prometheus_client,
           ]

@@ -28,9 +28,7 @@ def run_app(_: dict[str, Any]) -> None:
     """Launch Application Components."""
 
 
-@click.group(
-    name="run-all", invoke_without_command=True, help="Starts the application server."
-)
+@click.group(name="run-all", invoke_without_command=True, help="Starts the application server.")
 @click.option(
     "--host",
     help="Host interface to listen on.  Use 0.0.0.0 for all available interfaces.",
@@ -60,12 +58,12 @@ def run_app(_: dict[str, Any]) -> None:
 @click.option("-v", "--verbose", help="Enable verbose logging.", is_flag=True, default=False, type=bool)
 @click.option("-d", "--debug", help="Enable debugging.", is_flag=True, default=False, type=bool)
 def run_all_app(
-        host: str,
-        port: int | None,
-        http_workers: int | None,
-        reload: bool | None,
-        verbose: bool | None,
-        debug: bool | None,
+    host: str,
+    port: int | None,
+    http_workers: int | None,
+    reload: bool | None,
+    verbose: bool | None,
+    debug: bool | None,
 ) -> None:
     """Run the API server."""
     log.config.configure()
