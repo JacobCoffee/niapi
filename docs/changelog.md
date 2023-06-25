@@ -2,6 +2,34 @@
 
 All commits to this project will be documented in this file.
 
+## [Release \[v0.3.0\] - 2023-06-25](https://github.com/JacobCoffee/niapi/releases/tag/v0.3.0)
+
+- [See All commits in v0.3.0](https://github.com/JacobCoffee/niapi/commits/v0.3.0)
+
+[e736a00](https://github.com/JacobCoffee/niapi/commit/e736a003b7d80290023e55f184af503315febe6b) \... [4487fc5](https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa) \| [See diff for 0.3.0](https://github.com/JacobCoffee/niapi/compare/e736a003b7d80290023e55f184af503315febe6b...4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa)
+
+### Bug Fixes
+
+- ([4487fc5](https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa)) - Bad repo link (Jacob Coffee)
+
+### Documentation
+
+- ([a82a86a](https://github.com/JacobCoffee/niapi/commit/a82a86a1b8ca90f3c66a080291cfd074efcbfd1a)) - Adjust badges (Jacob Coffee)
+- ([662bd4b](https://github.com/JacobCoffee/niapi/commit/662bd4b9d9cdd8a07ab5cd7b7c2680a1d08c1e21)) - Adjust styling and pypi readme (Jacob Coffee)
+
+### Features
+
+- ([7bc5009](https://github.com/JacobCoffee/niapi/commit/7bc5009dd2b89724035a139b6c27e6bba31a8312)) - Include link to all commits in a version (Jacob Coffee)
+- ([0e42390](https://github.com/JacobCoffee/niapi/commit/0e42390ae6a061990fc79f7a8f356da3bd9483ec)) - Add rst to md conversion for gh release notes (Jacob Coffee)
+
+### Miscellaneous Tasks
+
+- ([168893f](https://github.com/JacobCoffee/niapi/commit/168893f955eeee168b82e5f196fa36c9c3f0e60c)) - Set execute bit and shebang (Jacob Coffee)
+
+### Release
+
+- ([7505f13](https://github.com/JacobCoffee/niapi/commit/7505f13e1fe16a8ee9b059a3e7527d4400ca472c)) - Bump to v0.3.0 (Jacob Coffee)
+
 ## [Release \[v0.2.0\] - 2023-06-25](https://github.com/JacobCoffee/niapi/releases/tag/v0.2.0)
 
 - [See All commits in v0.2.0](https://github.com/JacobCoffee/niapi/commits/v0.2.0)
