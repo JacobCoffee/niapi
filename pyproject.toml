@@ -1,0 +1,108 @@
+[tool.poetry]
+name = "napi"
+version = "0.1.0"
+description = "Network Data API"
+authors = ["Jacob Coffee <jacob@z7x.org>"]
+maintainers = [
+    "Jacob Coffee <jacob@z7x.org>",
+]
+license = "MIT"
+readme = "docs/PYPI_README.md"
+homepage = "https://github.com/JacobCoffee/napi"
+repository = "https://github.com/JacobCoffee/napi"
+documentation = "https://jacobcoffee.github.io/napi/index.html"
+keywords = [
+    "napi",
+    "network",
+    "api",
+    "tool",
+    "rest",
+    "http",
+    "asgi",
+    "pydantic",
+    "litestar",
+    "starlite",
+    "websocket",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Web Environment",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+    "Framework :: AsyncIO",
+#    Pending trove-classifiers#148
+#    "Framework :: Litestar",
+#    "Framework :: Litestar :: 2",
+    "Framework :: Pydantic",
+    "Framework :: Pydantic :: 1",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Topic :: Internet",
+    "Topic :: System :: Networking",
+]
+include = ["CHANGELOG.rst"]
+packages = [{ include = "napi" }]
+
+[tool.poetry.urls]
+"Issue Tracker" = "https://github.com/JacobCoffee/napi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+"Changelog" = "https://github.com/JacobCoffee/napi/releases/"
+"Twitter" = "https://twitter.com/_scriptr"
+"Reddit" = "https://www.reddit.com/u/monorepo"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+litestar = {version = "2.0b2", extras = ["standard", "structlog", "prometheus"]}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+coverage = "^7.2.7"
+pytest-benchmark = "^4.0.0"
+pytest-cov = "^4.1.0"
+pytest-docker = "^1.0.1"
+pytest-dotenv = "^0.5.2"
+pytest-mock = "^3.11.1"
+hypothesis = "^6.79.2"
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.lint.dependencies]
+black = "^23.3.0"
+ruff = "^0.0.275"
+codespell = "^2.2.5"
+mypy = "^1.4.0"
+shellcheck-py = "^0.9.0.5"
+slotscheck = "^0.16.5"
+pre-commit = "^3.3.3"
+pytailwindcss = "^0.2.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.0.1"
+sphinx-autobuild = "^2021.3.14"
+sphinx-copybutton = "^0.5.2"
+pydata-sphinx-theme = "^0.13.3"
+sphinx-click = "^4.4.0"
+sphinxcontrib-confluencebuilder = "^2.1.1"
+sphinx-toolbox = "^3.4.0"
+autodoc-pydantic = "^1.8.0"
+blacken-docs = "^1.14.0"
+
+[tool.poetry.scripts]
+# TODO
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
