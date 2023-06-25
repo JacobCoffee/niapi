@@ -26,7 +26,7 @@
 
 # `niapi` - Network Information API
 
-[//]: # (TODO)
+[//]: # "TODO"
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@
 
 ## About
 
-[//]: # (TODO)
+[//]: # "TODO"
 
 ## Installation
 
@@ -51,7 +51,7 @@ pip install niapi
 
 ## Usage
 
-[//]: # (TODO)
+[//]: # "TODO"
 
 Install the package with `pip`:
 
@@ -60,11 +60,13 @@ pip install niapi
 ```
 
 Using the CLI:
+
 ```python
 # todo
 ```
 
 Using the API
+
 ```python
 # todo
 ```
@@ -74,18 +76,20 @@ Using the API
 See [CONTRIBUTING.rst](CONTRIBUTING.rst) for more information.
 
 Start the app:
+
 ```console
 app run-all
 ```
+
 Start the TailwindCSS watcher:
+
 ```console
 tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resources/style.css --watch
 ```
 
-
 ## Contributors
 
-[//]: # (TODO)
+[//]: # "TODO"
 
 ## License
 
@@ -99,6 +103,7 @@ tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resource
 
 ## Screenshots
 
-[//]: # (TODO)
+[//]: # "TODO"
 
-![img.png](docs/images/index.png)
+![home.png](docs/images/index.png)
+![home-dark.png](docs/images/index-dark.png)
