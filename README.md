@@ -28,3 +28,70 @@
 
 [//]: # (TODO)
 
+## Table of Contents
+
+- [About](#about)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## About
+
+[//]: # (TODO)
+
+## Installation
+
+```console
+pip install niapi
+```
+
+## Usage
+
+[//]: # (TODO)
+
+Install the package with `pip`:
+
+```console
+pip install niapi
+```
+
+Using the CLI:
+```python
+# todo
+```
+
+Using the API
+```python
+# todo
+```
+
+## Contributing
+
+See [CONTRIBUTING.rst](CONTRIBUTING.rst) for more information.
+
+Start the app:
+```console
+app run-all
+```
+Start the TailwindCSS watcher:
+```console
+tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resources/style.css --watch
+```
+
+
+## Contributors
+
+[//]: # (TODO)
+
+## License
+
+[MIT](LICENSE)
+
+## Acknowledgements
+
+- Built on Litestar and Pydantic
+- Using https://feathericons.dev/
+- Using TailwindCSS

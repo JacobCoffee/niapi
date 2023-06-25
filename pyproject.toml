@@ -57,9 +57,16 @@ packages = [{ include = "niapi" }]
 "Twitter" = "https://twitter.com/_scriptr"
 "Reddit" = "https://www.reddit.com/u/monorepo"
 
+[tool.poetry.scripts]
+app = "litestar.__main__:run_cli"
+
+[tool.poetry.plugins."litestar.commands"]
+run-all = "niapi.cli:run_all_app"
+
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
 litestar = {version = "2.0b2", extras = ["standard", "structlog", "prometheus"]}
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
@@ -97,9 +104,6 @@ sphinxcontrib-confluencebuilder = "^2.1.1"
 sphinx-toolbox = "^3.4.0"
 autodoc-pydantic = "^1.8.0"
 blacken-docs = "^1.14.0"
-
-[tool.poetry.scripts]
-# TODO
 
 [build-system]
 requires = ["poetry-core"]
@@ -207,6 +211,7 @@ ignore = [
     "D415",    # pydocstyle - first line should end with a period, question mark, or exclamation point
     "E501",    # pycodestyle line too long, handled by black
     "PLW2901", # pylint - for loop variable overwritten by assignment target
+    "RUF012",  # Ruff-specific rules - classvar
 ]
 line-length = 120
 src = ["niapi", "tests", "docs/examples"]
