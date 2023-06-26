@@ -45,7 +45,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: ["windows-latest"] # remove "macos-latest", for now
+        os: ["macos-latest", "windows-latest"]
     uses: ./.github/workflows/test.yaml
     with:
       python-version: "3.11"
