@@ -101,7 +101,7 @@ def run_all_app(
 
 
 def _convert_uvicorn_args(args: dict[str, Any]) -> list[str]:
-    process_args = []
+    process_args: list[str] = []
     for arg, value in args.items():
         if isinstance(value, list):
             process_args.extend(f"--{arg}={val}" for val in value)
