@@ -138,16 +138,76 @@
         </svg>
       </button>
 
-      <a
-        href="/api"
-        class="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-500"
-        >API <span aria-hidden="true">&rarr;</span></a
-      >
+      <div class="relative inline-block text-left">
+        <div>
+          <button
+            type="button"
+            class="flex items-center rounded-full bg-white dark:bg-neutral-900 text-blue-400 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-100"
+            id="menu-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            <span class="sr-only">Open API Menu</span>
+            &nbsp;API&nbsp;
+            <!-- https://feathericons.dev/?search=more-vertical&iconset=feather -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              class="main-grid-item-icon pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="1"></circle>
+              <circle cx="12" cy="5" r="1"></circle>
+              <circle cx="12" cy="19" r="1"></circle>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white dark:bg-neutral-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+          id="menu"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="menu-button"
+          tabindex="-1"
+        >
+          <div class="py-1" role="none">
+            <a
+              href="/api/elements"
+              class="text-blue-400 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-500 block px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-0"
+              >Elements</a
+            >
+            <a
+              href="/api/swagger"
+              class="text-blue-400 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-500 block px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-1"
+              >Swagger</a
+            >
+            <a
+              href="/api/redoc"
+              class="text-blue-400 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-500 block px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-2"
+              >ReDoc</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
-  <!-- Mobile menu, show/hide based on menu open state. -->
   <div class="lg:hidden" role="dialog" aria-modal="true">
-    <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
     <div
       class="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white px-6 py-6"
@@ -246,5 +306,22 @@
       dropdownContent.addEventListener("mouseleave", hideDropdown);
     }
   });
+
+  let button = document.getElementById("menu-button");
+  let menu = document.getElementById("menu");
+
+  button.addEventListener("click", function (event) {
+    let isShown = menu.classList.toggle("hidden");
+    button.setAttribute("aria-expanded", !isShown);
+  });
+
+  window.onclick = function (event) {
+    if (!event.target.matches("#menu-button")) {
+      if (!menu.classList.contains("hidden")) {
+        menu.classList.add("hidden");
+        button.setAttribute("aria-expanded", false);
+      }
+    }
+  };
 </script>
 {% endblock %}
