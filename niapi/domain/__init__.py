@@ -15,11 +15,6 @@ if TYPE_CHECKING:
 
     from litestar.types import ControllerRouterHandler
 
-routes: list[ControllerRouterHandler] = [
-    # system.controllers.system.SystemController,
-    web.controllers.web.WebController,
-]
-
 __all__ = [
     "system",
     "web",
@@ -28,8 +23,15 @@ __all__ = [
     "signature_namespace",
 ]
 
+routes: list[ControllerRouterHandler] = [
+    # system.controllers.system.SystemController,
+    web.controllers.web.WebController,
+]
+"""Routes for the application."""
+
 signature_namespace: Mapping[str, Any] = {
     "FilterTypes": FilterTypes,
     "EmailStr": EmailStr,
     "OffsetPagination": OffsetPagination,
 }
+"""Namespace for the application signature."""

@@ -1,0 +1,49 @@
+# external library / undocumented external
+py:class BaseModel
+py:class pydantic.main.BaseModel
+py:class pydantic.generics.GenericModel
+py:class redis.asyncio.Redis
+py:class sqlalchemy.orm.decl_api.DeclarativeMeta
+py:class sqlalchemy.sql.sqltypes.TupleType
+py:class sqlalchemy.dialects.postgresql.named_types.ENUM
+py:class _orm.Mapper
+py:class _orm.registry
+py:class _schema.MetaData
+py:class _schema.Table
+py:class _RegistryType
+py:class abc.Collection
+py:class TypeEngine
+py:class ExternalType
+py:class UserDefinedType
+py:class _types.TypeDecorator
+py:meth _types.TypeDecorator.process_bind_param
+py:meth _types.TypeDecorator.process_result_value
+py:meth type_engine
+
+# type vars and aliases / intentionally undocumented
+py:class RouteHandlerType
+py:obj litestar.security.base.AuthType
+py:class ControllerRouterHandler
+py:class PathParameterDefinition
+py:class BaseSessionBackendT
+py:class litestar.contrib.repository.abc.CollectionT
+py:class litestar.contrib.sqlalchemy.repository.SelectT
+py:class AnyIOBackend
+py:class T
+py:class C
+py:class EmptyType
+
+# intentionally undocumented
+py:class NoneType
+py:class litestar._signature.field.SignatureField
+py:class litestar.utils.signature.ParsedType
+py:class litestar.utils.signature.ParsedSignature
+py:class litestar.utils.signature.ParsedParameter
+py:class litestar.utils.sync.AsyncCallable
+py:class BacklogStrategy
+py:class ExceptionT
+
+# types in changelog that no longer exist
+py:class litestar.response_containers.Template
+py:class litestar.response_containers.Redirect
+py:class litestar.response.RedirectResponse

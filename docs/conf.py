@@ -3,12 +3,17 @@ from __future__ import annotations
 
 import importlib.metadata
 import os
+import sys
+from pathlib import Path
 
 from dotenv import load_dotenv
 
 from niapi.metadata import __project__ as project
 
 # -- Environmental Data ------------------------------------------------------
+path = Path("..").resolve()
+tls_verify = False
+sys.path.insert(0, path.as_posix())
 load_dotenv()
 
 # -- Project information -----------------------------------------------------
@@ -41,7 +46,8 @@ intersphinx_mapping = {
     "click": ("https://click.palletsprojects.com/en/8.1.x/", None),
     "structlog": ("https://www.structlog.org/en/stable/", None),
     "opentelemetry": ("https://opentelemetry-python.readthedocs.io/en/latest/", None),
-    "litestar": ("https://docs.litestar.dev/2", None),
+    "litestar": ("https://docs.litestar.dev/2/", None),
+    "msgspec": ("https://jcristharif.com/msgspec/", None),
 }
 
 napoleon_google_docstring = True
@@ -51,13 +57,37 @@ napoleon_use_admonition_for_notes = True
 napoleon_use_admonition_for_references = False
 napoleon_attr_annotations = True
 
-autoclass_content = "class"
-autodoc_class_signature = "separated"
-autodoc_default_options = {"special-members": "__init__", "show-inheritance": True, "members": True}
-autodoc_member_order = "bysource"
-autodoc_typehints_format = "short"
+autoclass_content = "both"
+autodoc_default_options = {
+    "members": True,
+    "member-order": "bysource",
+    "special-members": "__init__",
+    "exclude-members": "__weakref__",
+    "show-inheritance": True,
+    "class-signature": "separated",
+    "typehints-format": "short",
+}
 
-nitpicky = True
+nitpicky = False
+nitpick_ignore = []
+nitpick_ignore_regex = []
+
+with Path("nitpick-exceptions").open() as file:
+    for line in file:
+        if line.strip() == "" or line.startswith("#"):
+            continue
+        dtype, target = line.split(None, 1)
+        target = target.strip()
+        nitpick_ignore.append((dtype, target))
+
+with Path("nitpick-exceptions-regex").open() as file:
+    for line in file:
+        if line.strip() == "" or line.startswith("#"):
+            continue
+        dtype, target = line.split(None, 1)
+        target = target.strip()
+        nitpick_ignore_regex.append((dtype, target))
+
 autosectionlabel_prefix_document = True
 suppress_warnings = [
     "autosectionlabel.*",
