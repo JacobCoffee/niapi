@@ -4,6 +4,65 @@ Changelog
 
 All commits to this project will be documented in this file.
 
+`Release [v0.4.0] - 2023-06-26 <https://github.com/JacobCoffee/niapi/releases/tag/v0.4.0>`_
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* `See All commits in v0.4.0 <https://github.com/JacobCoffee/niapi/commits/v0.4.0>`_
+
+`4487fc5 <https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa>`_ ... `680cd4b <https://github.com/JacobCoffee/niapi/commit/680cd4b4fc5af58c20e1d62c480adaee5b3b66d6>`_ | `See diff for 0.4.0 <https://github.com/JacobCoffee/niapi/compare/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa...680cd4b4fc5af58c20e1d62c480adaee5b3b66d6>`_
+
+Bug Fixes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`29c4cf4 <https://github.com/JacobCoffee/niapi/commit/29c4cf45f3201b2d3d609341f29526acb48ae4a8>`_)  - Remove bad badge (Jacob Coffee)
+* (`edd48f3 <https://github.com/JacobCoffee/niapi/commit/edd48f3487b453e2587b38d4d3cd4a75c60ae359>`_)  - Bad sonar project name (Jacob Coffee)
+* (`00599a4 <https://github.com/JacobCoffee/niapi/commit/00599a400e39bbcf50b4a9cf1a020aece90adb53>`_)  - Failing ini option (Jacob Coffee)
+* (`7ae43d5 <https://github.com/JacobCoffee/niapi/commit/7ae43d5bf00ab8e65ebe5c691a628037099f61c0>`_)  - Move env variable to correct step (Jacob Coffee)
+* (`e4a48c0 <https://github.com/JacobCoffee/niapi/commit/e4a48c024409f528c6e24dda056c3b5f2f3e2232>`_)  - Change name (Jacob Coffee)
+* (`0f6d4e3 <https://github.com/JacobCoffee/niapi/commit/0f6d4e3690d22a68c86d6973b2962fc5ab11dc0c>`_)  - Update poetry (Jacob Coffee)
+* (`e77301a <https://github.com/JacobCoffee/niapi/commit/e77301af8d313b3b006225d3965887c586b7860e>`_)  - Remove macos-latest (Jacob Coffee)
+* (`93f98b5 <https://github.com/JacobCoffee/niapi/commit/93f98b5fcadfaa2457d926ae3ad372fa740827a6>`_)  - Disable poetry lock for now and re-add macos-latest (Jacob Coffee)
+
+Documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`4aff7e7 <https://github.com/JacobCoffee/niapi/commit/4aff7e7d7a6e7c97460643d699635ce6ece87714>`_)  - Changelog updates (Jacob Coffee)
+* (`a5e421f <https://github.com/JacobCoffee/niapi/commit/a5e421f6514b78b76fd36afee36106a13c9a9daa>`_)  - Changelog updates (Jacob Coffee)
+* (`5dbd7d9 <https://github.com/JacobCoffee/niapi/commit/5dbd7d94bbaeb03d64873cb0bfb20a80f49a4fa8>`_)  - Fix badges (Jacob Coffee)
+* (`5a2ae22 <https://github.com/JacobCoffee/niapi/commit/5a2ae22cb9af8a4a62ff8f59e69dafa0aa4f13a3>`_)  - Fix the fix (Jacob Coffee)
+* (`79eada1 <https://github.com/JacobCoffee/niapi/commit/79eada17e1477feae3f3e15106331e4b81625157>`_)  - Fix the fix (Jacob Coffee)
+* (`515ccff <https://github.com/JacobCoffee/niapi/commit/515ccffadb0ff475f0fa4f3d83e85e7fbf54284b>`_)  - Attempt to make pypi work (Jacob Coffee)
+* (`918beb8 <https://github.com/JacobCoffee/niapi/commit/918beb8359a23d15e64bdda0554e8622f0f9173e>`_)  - Update litestar badge style (Jacob Coffee)
+* (`0d39c83 <https://github.com/JacobCoffee/niapi/commit/0d39c83b7407e5863661fcdfe503eaa13da89b66>`_)  - Full api documentation (Jacob Coffee)
+* (`b941934 <https://github.com/JacobCoffee/niapi/commit/b941934419e7ced3f44ae15db8875ea07a49e4b5>`_)  - Introduces api reference docs (Jacob Coffee)
+
+Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`cb4d292 <https://github.com/JacobCoffee/niapi/commit/cb4d292e0910b58183ff6743e4232fbbb0961107>`_)  - Add some tests (Jacob Coffee)
+
+Miscellaneous Tasks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`7444678 <https://github.com/JacobCoffee/niapi/commit/7444678d8c6b1dd1ac055eb2f8cb9c930c518ed1>`_)  - Run pre-commit on sourcery pr (Jacob Coffee)
+
+Ai
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`680cd4b <https://github.com/JacobCoffee/niapi/commit/680cd4b4fc5af58c20e1d62c480adaee5b3b66d6>`_)  - Apply sourcery-suggested fixes (Jacob Coffee)
+
+Ci
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`e4ef605 <https://github.com/JacobCoffee/niapi/commit/e4ef605a37a67932b2f37fd489ab8d84f00d4d6b>`_)  - Update pre-commit (Jacob Coffee)
+* (`6af18d4 <https://github.com/JacobCoffee/niapi/commit/6af18d4a3db2cc02246f82dc424d6fa8e5822714>`_)  - Add env for secret (Jacob Coffee)
+* (`0f7c442 <https://github.com/JacobCoffee/niapi/commit/0f7c44297bbb168fe40d241f625588c96c674413>`_)  - Add env for secret (Jacob Coffee)
+* (`2439fe1 <https://github.com/JacobCoffee/niapi/commit/2439fe15faa29a7b5bd817c9535a4e0add1fc9c6>`_)  - Add env for secret (Jacob Coffee)
+* (`a5f75cb <https://github.com/JacobCoffee/niapi/commit/a5f75cb9a0a5fbf96d6393cc1d0bc6b0d5fe3fc3>`_)  - Bump poetry pre-commit version (Jacob Coffee)
+* (`faaa77e <https://github.com/JacobCoffee/niapi/commit/faaa77e1a8efeda32046f4ffaa36369bd31ff814>`_)  - Add secret to global scope (Jacob Coffee)
+* (`fb9b125 <https://github.com/JacobCoffee/niapi/commit/fb9b1257b7b76daf07903e851fce5bb0d858de2e>`_)  - Attempts to fix codecov ci (Jacob Coffee)
+* (`29ece89 <https://github.com/JacobCoffee/niapi/commit/29ece897002ac8d671e168fc9ad1e5bc4606215f>`_)  - Attempts to fix codecov ci (Jacob Coffee)
+* (`63736ae <https://github.com/JacobCoffee/niapi/commit/63736aed648851cc9d9d2a444d91137b1e216b27>`_)  - Attempts to fix codecov ci (Jacob Coffee)
+
 `Release [v0.3.0] - 2023-06-25 <https://github.com/JacobCoffee/niapi/releases/tag/v0.3.0>`_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * `See All commits in v0.3.0 <https://github.com/JacobCoffee/niapi/commits/v0.3.0>`_
