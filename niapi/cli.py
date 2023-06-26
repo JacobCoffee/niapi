@@ -89,7 +89,7 @@ def run_all_app(
             "timeout-keep-alive": settings.server.KEEPALIVE,
         }
         if reload_dirs:
-            process_args.update({"reload-dir": reload_dirs})
+            process_args["reload-dir"] = reload_dirs
         subprocess.run(
             ["uvicorn", settings.server.APP_LOC, *_convert_uvicorn_args(process_args)], check=True  # noqa: S603, S607
         )
@@ -101,15 +101,10 @@ def run_all_app(
 
 
 def _convert_uvicorn_args(args: dict[str, Any]) -> list[str]:
-    process_args = []
+    process_args: list[str] = []
     for arg, value in args.items():
-        if value is None:
-            pass
         if isinstance(value, list):
-            for val in value:
-                if val is None:
-                    pass
-                process_args.append(f"--{arg}={val}")
+            process_args.extend(f"--{arg}={val}" for val in value)
         if isinstance(value, bool):
             if value:
                 process_args.append(f"--{arg}")
