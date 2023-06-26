@@ -68,7 +68,7 @@ autodoc_default_options = {
     "typehints-format": "short",
 }
 
-nitpicky = False
+nitpicky = False  # This is too much of a headache right now
 nitpick_ignore = []
 nitpick_ignore_regex = []
 
