@@ -27,12 +27,30 @@ if TYPE_CHECKING:
 
 
 def check_email(email: str) -> str:
+    """Check if the email is valid.
+
+    Args:
+        email: The email to check.
+
+    Returns:
+        The email if it is valid.
+    """
     if "@" not in email:
         raise ValueError("Invalid email!")
     return email.lower()
 
 
 def slugify(value: str, allow_unicode: bool = False, separator: str | None = None) -> str:
+    """Convert a string to a slug.
+
+    Args:
+        value: The string to slugify.
+        allow_unicode: Whether to allow unicode characters.
+        separator: The separator to use.
+
+    Returns:
+        The slugified string.
+    """
     if allow_unicode:
         value = unicodedata.normalize("NFKC", value)
     else:
@@ -44,14 +62,40 @@ def slugify(value: str, allow_unicode: bool = False, separator: str | None = Non
 
 
 def camel_case(string: str) -> str:
+    """Convert a string to camel case.
+
+    Args:
+        string: The string to convert.
+
+    Returns:
+        The camel cased string.
+    """
     return "".join(word if index == 0 else word.capitalize() for index, word in enumerate(string.split("_")))
 
 
 def case_insensitive_string_compare(a: str, b: str, /) -> bool:
+    """Compare two strings case insensitively.
+
+    Args:
+        a: The first string.
+        b: The second string.
+
+    Returns:
+        Whether the strings are equal.
+    """
     return a.strip().lower() == b.strip().lower()
 
 
 def dataclass_as_dict_shallow(dataclass: Any, *, exclude_none: bool = False) -> dict[str, Any]:
+    """Convert a dataclass to a dict.
+
+    Args:
+        dataclass: The dataclass to convert.
+        exclude_none: Whether to exclude None values.
+
+    Returns:
+        The dataclass as a dict.
+    """
     ret: dict[str, Any] = {}
     for field in dataclasses.fields(dataclass):
         value = getattr(dataclass, field.name)
@@ -63,6 +107,14 @@ def dataclass_as_dict_shallow(dataclass: Any, *, exclude_none: bool = False) -> 
 
 @lru_cache
 def module_to_os_path(dotted_path: str = "app") -> Path:
+    """Get the path to a module.
+
+    Args:
+        dotted_path: The dotted path to the module.
+
+    Returns:
+        The path to the module.
+    """
     src = pkgutil.get_loader(dotted_path)
     if not isinstance(src, SourceFileLoader):
         raise TypeError("Couldn't find the path for %s", dotted_path)
@@ -70,12 +122,38 @@ def module_to_os_path(dotted_path: str = "app") -> Path:
 
 
 def import_string(dotted_path: str) -> Any:
+    """Import a class/function from a dotted path.
+
+    Args:
+        dotted_path: The dotted path to the class/function.
+
+    Returns:
+        The imported class/function.
+    """
+
     def _is_loaded(module: ModuleType | None) -> bool:
+        """Check if a module is loaded.
+
+        Args:
+            module: The module to check.
+
+        Returns:
+            Whether the module is loaded.
+        """
         spec = getattr(module, "__spec__", None)
         initializing = getattr(spec, "_initializing", False)
         return bool(module and spec and not initializing)
 
     def _cached_import(module_path: str, class_name: str) -> Any:
+        """Import a class/function from a dotted path.
+
+        Args:
+            module_path: The dotted path to the module.
+            class_name: The name of the class/function.
+
+        Returns:
+            The imported class/function.
+        """
         module = sys.modules.get(module_path)
         if not _is_loaded(module):
             module = import_module(module_path)

@@ -104,3 +104,4 @@ coverage.*
 setup.py
 !/niapi/lib/
 !/tests/**/lib/
+!/docs/**/lib/
