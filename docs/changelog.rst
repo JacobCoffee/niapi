@@ -8,7 +8,28 @@ All commits to this project will be documented in this file.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * `See All commits in v0.4.0 <https://github.com/JacobCoffee/niapi/commits/v0.4.0>`_
 
-`4487fc5 <https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa>`_ ... `680cd4b <https://github.com/JacobCoffee/niapi/commit/680cd4b4fc5af58c20e1d62c480adaee5b3b66d6>`_ | `See diff for 0.4.0 <https://github.com/JacobCoffee/niapi/compare/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa...680cd4b4fc5af58c20e1d62c480adaee5b3b66d6>`_
+`dfabc63 <https://github.com/JacobCoffee/niapi/commit/dfabc63f117c2f29feb88367f601cf73767f1949>`_ ... `ed211df <https://github.com/JacobCoffee/niapi/commit/ed211dfdf8a449e157e42ef13b3b858c2075bb59>`_ | `See diff for 0.4.0 <https://github.com/JacobCoffee/niapi/compare/dfabc63f117c2f29feb88367f601cf73767f1949...ed211dfdf8a449e157e42ef13b3b858c2075bb59>`_
+
+Bug Fixes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`6956665 <https://github.com/JacobCoffee/niapi/commit/695666550d9b074396b5e443bacece7da66da116>`_)  - Resolves issue with `mypy` (read: me) being stupid (Jacob Coffee)
+
+Documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`ed211df <https://github.com/JacobCoffee/niapi/commit/ed211dfdf8a449e157e42ef13b3b858c2075bb59>`_)  - Update markdown changelog (Jacob Coffee)
+
+Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`8ecf62e <https://github.com/JacobCoffee/niapi/commit/8ecf62e0c4c043c1a9c8a1ccd0440a5da76b6cb7>`_)  - Adds api menu dropdown (Jacob Coffee)
+
+`Release [v0.4.0] - 2023-06-26 <https://github.com/JacobCoffee/niapi/releases/tag/v0.4.0>`_
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* `See All commits in v0.4.0 <https://github.com/JacobCoffee/niapi/commits/v0.4.0>`_
+
+`4487fc5 <https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa>`_ ... `dfabc63 <https://github.com/JacobCoffee/niapi/commit/dfabc63f117c2f29feb88367f601cf73767f1949>`_ | `See diff for 0.4.0 <https://github.com/JacobCoffee/niapi/compare/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa...dfabc63f117c2f29feb88367f601cf73767f1949>`_
 
 Bug Fixes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,6 +83,11 @@ Ci
 * (`fb9b125 <https://github.com/JacobCoffee/niapi/commit/fb9b1257b7b76daf07903e851fce5bb0d858de2e>`_)  - Attempts to fix codecov ci (Jacob Coffee)
 * (`29ece89 <https://github.com/JacobCoffee/niapi/commit/29ece897002ac8d671e168fc9ad1e5bc4606215f>`_)  - Attempts to fix codecov ci (Jacob Coffee)
 * (`63736ae <https://github.com/JacobCoffee/niapi/commit/63736aed648851cc9d9d2a444d91137b1e216b27>`_)  - Attempts to fix codecov ci (Jacob Coffee)
+
+Release
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`dfabc63 <https://github.com/JacobCoffee/niapi/commit/dfabc63f117c2f29feb88367f601cf73767f1949>`_)  - V0.4.0 (Jacob Coffee)
 
 `Release [v0.3.0] - 2023-06-25 <https://github.com/JacobCoffee/niapi/releases/tag/v0.3.0>`_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
