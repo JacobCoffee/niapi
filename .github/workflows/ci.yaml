@@ -41,11 +41,14 @@ jobs:
       integration: ${{ matrix.python-version == '3.11' }}
 
   upload-coverage:
-    needs: test
-    name: Upload coverage reports to Codecov
-    uses: codecov/codecov-action@v3
-    env:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    needs:
+      - test
+      - validate
+    steps:
+      - uses: codecov/codecov-action@v3
+      - name: Upload coverage reports to Codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   test-platform-compat:
     if: github.event_name == 'push'
