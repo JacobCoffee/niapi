@@ -1,0 +1,100 @@
+<table class="min-w-full divide-y divide-gray-300 dark:divide-gray-600">
+  <thead>
+    <tr>
+      <th
+        scope="col"
+        class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 dark:text-white sm:pl-6 hover:bg-neutral-900/40"
+      >
+        Field
+      </th>
+      <th
+        scope="col"
+        class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white hover:bg-neutral-900/40"
+      >
+        Value
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Subnet Mask
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ subnet_mask }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Wildcard Subnet Mask
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ wildcard_subnet_mask }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Total IPs
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ total_ips }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Usable IPs
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ usable_ips }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Network IP
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ network_ip }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Broadcast IP
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ broadcast_ip }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        First IP
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ first_ip }}
+      </td>
+    </tr>
+    <tr class="hover:bg-neutral-900/40">
+      <td
+        class="relative py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium text-gray-900 dark:text-neutral-200"
+      >
+        Last IP
+      </td>
+      <td class="px-3 py-3.5 text-sm text-gray-500 dark:text-gray-400">
+        {{ last_ip }}
+      </td>
+    </tr>
+  </tbody>
+</table>

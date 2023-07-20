@@ -7,7 +7,7 @@ from litestar.contrib.repository.filters import FilterTypes
 from litestar.pagination import OffsetPagination
 from pydantic import EmailStr
 
-from . import system, urls, web
+from . import calculator, system, urls, web
 
 if TYPE_CHECKING:
     from collections.abc import Mapping
@@ -26,6 +26,7 @@ __all__ = [
 routes: list[ControllerRouterHandler] = [
     # system.controllers.system.SystemController,
     web.controllers.web.WebController,
+    calculator.controllers.calculator.CalculatorController,
 ]
 """Routes for the application."""
 
