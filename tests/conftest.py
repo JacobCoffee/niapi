@@ -69,7 +69,7 @@ def fx_app(pytestconfig: pytest.Config, monkeypatch: MonkeyPatch) -> Litestar:
     Returns:
         The application instance.
     """
-    from niapi.asgi import create_app
+    from app.asgi import create_app
 
     return create_app()
 
@@ -113,15 +113,15 @@ def fx_cap_logger(monkeypatch: MonkeyPatch) -> CapturingLogger:
     Returns:
         CapturingLogger: A logger that captures output.
     """
-    import niapi.lib
+    import app.lib
 
-    niapi.lib.log.configure(
-        niapi.lib.log.default_processors  # type:ignore[arg-type]
+    app.lib.log.configure(
+        app.lib.log.default_processors  # type:ignore[arg-type]
     )
     clear_contextvars()
-    logger = niapi.lib.log.controller.LOGGER.bind()
+    logger = app.lib.log.controller.LOGGER.bind()
     logger._logger = CapturingLogger()
-    logger._processors = niapi.lib.log.default_processors[:-1]
-    monkeypatch.setattr(niapi.lib.log.controller, "LOGGER", logger)
+    logger._processors = app.lib.log.default_processors[:-1]
+    monkeypatch.setattr(app.lib.log.controller, "LOGGER", logger)
     # noinspection PyProtectedMember
     return logger._logger

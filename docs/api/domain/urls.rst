@@ -4,5 +4,5 @@ urls
 
 URL patterns for the NIAPI app.
 
-.. automodule:: niapi.domain.urls
+.. automodule:: app.domain.urls
      :members:

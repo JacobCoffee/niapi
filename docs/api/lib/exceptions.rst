@@ -4,5 +4,5 @@ exceptions
 
 Application exceptions
 
-.. automodule:: niapi.lib.exceptions
+.. automodule:: app.lib.exceptions
      :members:

@@ -5,6 +5,6 @@ schema
 Schema for the API and application.
 
 
-.. automodule:: niapi.lib.schema
+.. automodule:: app.lib.schema
     :members:
     :noindex:

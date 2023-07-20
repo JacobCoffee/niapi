@@ -5,7 +5,7 @@ from litestar.openapi.config import OpenAPIConfig
 from litestar.openapi.controller import OpenAPIController
 from litestar.openapi.spec import Contact
 
-from niapi.lib import settings
+from app.lib import settings
 
 __all__ = ("OverridenController",)
 

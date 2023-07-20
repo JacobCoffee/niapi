@@ -9,7 +9,7 @@ from typing import Any
 import click
 from rich import get_console
 
-from niapi.lib import log, settings
+from app.lib import log, settings
 
 __all__ = [
     "run_all_app",

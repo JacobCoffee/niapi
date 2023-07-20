@@ -11,8 +11,8 @@ from litestar.contrib.jinja import JinjaTemplateEngine
 from litestar.data_extractors import RequestExtractorField, ResponseExtractorField  # noqa: TCH002
 from pydantic import BaseSettings, SecretBytes, ValidationError, validator
 
-from niapi import utils
-from niapi.metadata import __version__ as version
+from app import utils
+from app.metadata import __version__ as version
 
 __all__ = (
     "APISettings",
@@ -28,7 +28,7 @@ __all__ = (
 
 load_dotenv()
 
-DEFAULT_MODULE_NAME = "niapi"
+DEFAULT_MODULE_NAME = "app"
 BASE_DIR: Final = utils.module_to_os_path(DEFAULT_MODULE_NAME)
 STATIC_DIR = Path(BASE_DIR / "domain" / "web" / "public")
 TEMPLATES_DIR = Path(BASE_DIR / "domain" / "web" / "templates")
@@ -48,7 +48,7 @@ class ServerSettings(BaseSettings):
         env_file = ".env"
         env_prefix = "SERVER_"
 
-    APP_LOC: str = "niapi.asgi:create_app"
+    APP_LOC: str = "app.asgi:create_app"
     """Path to app executable, or factory."""
     APP_LOC_IS_FACTORY: bool = True
     """Indicate if APP_LOC points to an executable or factory."""

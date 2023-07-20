@@ -8,7 +8,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from niapi.metadata import __project__ as project
+from app.metadata import __project__ as project
 
 # -- Environmental Data ------------------------------------------------------
 path = Path("..").resolve()

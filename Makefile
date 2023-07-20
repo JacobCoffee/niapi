@@ -72,7 +72,7 @@ test:  ## Run the tests
 	$(POETRY_RUN_BIN) pytest tests
 
 coverage:  ## Run the tests and generate coverage report
-	$(POETRY_RUN_BIN) pytest tests --cov=niapi
+	$(POETRY_RUN_BIN) pytest tests --cov=app
 	$(POETRY_RUN_BIN) coverage html
 	$(POETRY_RUN_BIN) coverage xml
 
@@ -89,7 +89,7 @@ docs-clean: ## Dump the existing built docs
 	rm -rf docs/_build
 
 docs-serve: docs-clean ## Serve the docs locally
-	$(POETRY_RUN_BIN) $(SPHINXAUTOBUILD) docs docs/_build/ -j auto --watch niapi --watch docs --watch tests --watch CONTRIBUTING.rst --port 8002
+	$(POETRY_RUN_BIN) $(SPHINXAUTOBUILD) docs docs/_build/ -j auto --watch app --watch docs --watch tests --watch CONTRIBUTING.rst --port 8002
 
 docs: docs-clean ## Dump the existing built docs and rebuild them
 	$(POETRY_RUN_BIN) $(SPHINXBUILD) docs docs/_build/ -E -a -j auto --keep-going
@@ -142,11 +142,11 @@ production:	 ## Install the project in production mode.
 	if [ "$(VENV_EXISTS)" ]; then $(MAKE) destroy; fi
 	if [ "$(USING_POETRY)" ]; then $(POETRY) config virtualenvs.in-project true  && $(POETRY) config virtualenvs.options.always-copy true && python3 -m venv --copies .venv && source .venv/bin/activate && .venv/bin/pip install -U wheel setuptools cython pip && $(POETRY) install --only main && $(POETRY) install --only docs; fi
 	if [ "$(VENV_EXISTS)" ]; then cp /data/packages/tailwind/tailwindcss-3.3.1-linux-x64 .venv/bin/tailwindcss; fi
-	if [ "$(VENV_EXISTS)" ]; then .venv/bin/tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resources/style.css; fi
+	if [ "$(VENV_EXISTS)" ]; then .venv/bin/tailwindcss -i app/domain/web/resources/input.css -o app/domain/web/resources/style.css; fi
 	@echo "=> Install complete! Note: If you want to re-install re-run 'make production'"
 
 run-dev-server: ## Run the app in dev mode
 	$(POETRY_RUN_BIN) app run server --http-workers 1 --reload
 
 run-dev-frontend: ## Run the app frontend in dev mode
-	$(POETRY_RUN_BIN) tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resources/style.css --watch
+	$(POETRY_RUN_BIN) tailwindcss -i app/domain/web/resources/input.css -o app/domain/web/resources/style.css --watch

@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from litestar.template.config import TemplateConfig
 
-from niapi.lib import settings
+from app.lib import settings
 
 config = TemplateConfig(
     directory=settings.TEMPLATES_DIR,

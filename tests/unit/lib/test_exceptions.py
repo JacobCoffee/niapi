@@ -1,4 +1,4 @@
-"""Test niapi/lib/exceptions.py."""
+"""Test app/lib/exceptions.py."""
 from typing import TYPE_CHECKING
 from unittest.mock import ANY, MagicMock
 
@@ -13,8 +13,8 @@ from litestar.status_codes import (
 )
 from litestar.testing import RequestFactory, create_test_client
 
-from niapi.lib import exceptions
-from niapi.lib.exceptions import ApplicationError
+from app.lib import exceptions
+from app.lib.exceptions import ApplicationError
 
 if TYPE_CHECKING:
     from collections import abc
@@ -91,7 +91,7 @@ def test_exception_to_http_response(exc: type[exceptions.ApplicationError], stat
         (
             exceptions.ApplicationError("message"),
             exceptions.exception_to_http_response,
-            b"niapi.lib.exceptions.ApplicationError: message\n",
+            b"app.lib.exceptions.ApplicationError: message\n",
         ),
     ],
 )

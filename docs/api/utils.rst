@@ -4,5 +4,5 @@ utils
 
 Utilities for the application.
 
-.. automodule:: niapi.utils
+.. automodule:: app.utils
      :members:

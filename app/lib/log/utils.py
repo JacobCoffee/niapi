@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING
 
 __all__ = ["EventFilter", "msgspec_json_renderer"]
 
-from niapi.lib import serialization
+from app.lib import serialization
 
 if TYPE_CHECKING:
     from collections.abc import Iterable

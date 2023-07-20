@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING
 import structlog
 from litestar.logging.config import LoggingConfig
 
-from niapi.lib import settings
+from app.lib import settings
 
 from . import controller
 from .utils import EventFilter, msgspec_json_renderer

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from pydantic import BaseModel as _BaseModel
 
-from niapi.utils import camel_case
+from app.utils import camel_case
 
 __all__ = ["BaseModel", "CamelizedBaseModel"]
 
