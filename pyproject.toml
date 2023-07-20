@@ -7,7 +7,7 @@ maintainers = [
     "Jacob Coffee <jacob@z7x.org>",
 ]
 license = "MIT"
-readme = "docs/PYPI_README.md"
+readme = "README.md"
 homepage = "https://github.com/JacobCoffee/niapi"
 repository = "https://github.com/JacobCoffee/niapi"
 documentation = "https://jacobcoffee.github.io/niapi/index.html"
