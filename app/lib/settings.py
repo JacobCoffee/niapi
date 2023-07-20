@@ -30,7 +30,7 @@ load_dotenv()
 
 DEFAULT_MODULE_NAME = "app"
 BASE_DIR: Final = utils.module_to_os_path(DEFAULT_MODULE_NAME)
-STATIC_DIR = Path(BASE_DIR / "domain" / "web" / "public")
+STATIC_DIR = Path(BASE_DIR / "domain" / "web" / "resources")
 TEMPLATES_DIR = Path(BASE_DIR / "domain" / "web" / "templates")
 
 
