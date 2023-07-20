@@ -4,5 +4,5 @@ cors
 
 CORS config
 
-.. automodule:: niapi.lib.cors
+.. automodule:: app.lib.cors
      :members:

@@ -4,6 +4,6 @@ controller
 
 Log config for the controllers
 
-.. automodule:: niapi.lib.log.controller
+.. automodule:: app.lib.log.controller
     :members:
     :noindex:

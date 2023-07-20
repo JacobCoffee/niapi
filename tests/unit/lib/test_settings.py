@@ -1,11 +1,11 @@
-"""Test niapi/lib/settings.py."""
+"""Test app/lib/settings.py."""
 import os
 from pathlib import Path
 
 from dotenv import load_dotenv
 from pydantic import ValidationError
 
-from niapi.lib import settings
+from app.lib import settings
 
 
 def test_app_slug() -> None:
@@ -32,7 +32,7 @@ def test_server_settings() -> None:
     """Test server settings."""
     server_settings = settings.ServerSettings()
 
-    assert server_settings.APP_LOC == "niapi.asgi:create_app"
+    assert server_settings.APP_LOC == "app.asgi:create_app"
     assert server_settings.HOST == "test"
     assert isinstance(server_settings.RELOAD_DIRS, list)
     assert len(server_settings.RELOAD_DIRS) == 1

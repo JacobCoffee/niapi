@@ -4,5 +4,5 @@ template
 
 Template engine config
 
-.. automodule:: niapi.lib.template
+.. automodule:: app.lib.template
      :members:

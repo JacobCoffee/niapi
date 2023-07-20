@@ -1,4 +1,4 @@
-"""Test niapi/utils.py."""
+"""Test app/utils.py."""
 import re
 import string
 from dataclasses import dataclass
@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import hypothesis.strategies as st
 from hypothesis import given
 
-from niapi.utils import camel_case, case_insensitive_string_compare, check_email, dataclass_as_dict_shallow, slugify
+from app.utils import camel_case, case_insensitive_string_compare, check_email, dataclass_as_dict_shallow, slugify
 
 
 @given(st.emails())

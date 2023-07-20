@@ -4,5 +4,5 @@ metadata
 
 Metadata for the application.
 
-.. automodule:: niapi.metadata
+.. automodule:: app.metadata
      :members:

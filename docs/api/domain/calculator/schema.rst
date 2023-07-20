@@ -4,5 +4,5 @@ schema
 
 Schema for the application calculator.
 
-.. automodule:: niapi.domain.calculator.schema
+.. automodule:: app.domain.calculator.schema
     :members:

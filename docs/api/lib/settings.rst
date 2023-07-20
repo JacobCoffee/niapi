@@ -4,5 +4,5 @@ settings
 
 Application settings
 
-.. automodule:: niapi.lib.settings
+.. automodule:: app.lib.settings
      :members:

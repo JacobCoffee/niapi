@@ -5,7 +5,7 @@ from litestar import Controller, get
 from litestar.response import Template
 from litestar.status_codes import HTTP_200_OK
 
-from niapi.domain import urls
+from app.domain import urls
 
 __all__ = ["WebController"]
 

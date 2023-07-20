@@ -4,5 +4,5 @@ serialization
 
 Application serialization utilities.
 
-.. automodule:: niapi.lib.serialization
+.. automodule:: app.lib.serialization
      :members:

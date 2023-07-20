@@ -4,5 +4,5 @@ asgi
 
 Entry point for ASGI-compatible application.
 
-.. automodule:: niapi.asgi
+.. automodule:: app.asgi
      :members:

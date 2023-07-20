@@ -15,8 +15,8 @@ def create_app() -> Litestar:
     from litestar import Litestar
     from pydantic import SecretStr
 
-    from niapi import domain
-    from niapi.lib import (
+    from app import domain
+    from app.lib import (
         cors,
         exceptions,
         log,

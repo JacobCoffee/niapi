@@ -4,6 +4,6 @@ init
 
 Log initialization
 
-.. automodule:: niapi.lib.log.__init__
+.. automodule:: app.lib.log.__init__
     :members:
     :noindex:

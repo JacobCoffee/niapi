@@ -4,5 +4,5 @@ openapi
 
 OpenAPI config
 
-.. automodule:: niapi.lib.openapi
+.. automodule:: app.lib.openapi
      :members:

@@ -4,5 +4,5 @@ Domain Initializer
 
 Initializes the domain module.
 
-.. automodule:: niapi.domain.__init__
+.. automodule:: app.domain.__init__
      :members:

@@ -1,4 +1,4 @@
-"""Test niapi/cli.py."""
+"""Test app/cli.py."""
 from collections.abc import Generator
 from typing import Any
 from unittest.mock import MagicMock, patch
@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 from click.testing import CliRunner
 
-from niapi.cli import _convert_uvicorn_args, run_all_app
+from app.cli import _convert_uvicorn_args, run_all_app
 
 
 def test_convert_uvicorn_args() -> None:
@@ -34,8 +34,8 @@ def test_convert_uvicorn_args() -> None:
     assert _convert_uvicorn_args(args) == expected_result
 
 
-@patch("niapi.cli.multiprocessing.active_children", MagicMock(return_value=[]))
-@patch("niapi.cli.subprocess.run")
+@patch("app.cli.multiprocessing.active_children", MagicMock(return_value=[]))
+@patch("app.cli.subprocess.run")
 def test_run_all_app(mocked_subprocess_run: MagicMock) -> None:
     """Test run_all_app.
 
@@ -71,9 +71,9 @@ def test_run_server(cli_runner: Any, monkeypatch: pytest.MonkeyPatch) -> None:
     Returns:
         None
     """
-    import niapi.cli
+    import app.cli
 
     run_server_subprocess = MagicMock()
-    monkeypatch.setattr(niapi.cli, "run_all_app", run_server_subprocess)
-    result = cli_runner.invoke(niapi.cli.run_all_app)
+    monkeypatch.setattr(app.cli, "run_all_app", run_server_subprocess)
+    result = cli_runner.invoke(app.cli.run_all_app)
     assert result.exit_code == 0

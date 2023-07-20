@@ -4,8 +4,8 @@ from __future__ import annotations
 from rich import get_console
 from rich.traceback import install as rich_tracebacks
 
-from niapi import asgi, cli
-from niapi.metadata import __version__
+from app import asgi, cli
+from app.metadata import __version__
 
 __all__ = (
     "__version__",

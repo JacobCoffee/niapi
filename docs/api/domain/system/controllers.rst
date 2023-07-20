@@ -4,5 +4,5 @@ controllers
 
 Controllers for the application system.
 
-.. automodule:: niapi.domain.system.controllers
+.. automodule:: app.domain.system.controllers
     :members:
