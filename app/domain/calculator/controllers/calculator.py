@@ -44,7 +44,16 @@ class CalculatorController(Controller):
             str, Parameter(..., description="The CIDR notation.", pattern=r"^(?:[0-9]|[1-2][0-9]|3[0-2])$")
         ],
     ) -> HTMXTemplate:
-        """Calculate IP."""
+        """Calculate IP.
+
+        Args:
+            request: HTMXRequest
+            ip: The IP address in standard IPv4 format.
+            prefix: The CIDR notation.
+
+        Returns:
+            The request data via HTMX as a template passed to partial.html
+        """
 
         net = ipaddress.IPv4Network(f"{ip}/{prefix}", strict=False)
 
@@ -74,5 +83,5 @@ class CalculatorController(Controller):
         return HTMXTemplate(
             template_name="partial.html",
             context=network_info.dict(),  # Convert the pydantic model to a dict
-            push_url="/calculate",
+            push_url=False,
         )

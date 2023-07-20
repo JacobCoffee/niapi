@@ -52,23 +52,43 @@ pip install niapi
 
 [//]: # "TODO"
 
-Install the package with `pip`:
+Install the project:
 
 ```console
-pip install niapi
+pip install -e .
+```
+
+Run the project:
+
+> **NOTE:** From within the virtual environment
+
+```console
+app run -r --debug
 ```
 
 Using the CLI:
 
-```python
-# todo
+```console
+# via curl
+➜ curl --request GET \
+        --url 'http://0.0.0.0:8000/calculator/ip?ip=4.8.15.16&prefix=23' \
+        --header 'Content-Type: application/json'
+# via App CLI
+# TODO
+app calculate "10.248.15.39/29"
 ```
 
 Using the API
 
-```python
-# todo
-```
+1. Browse to:
+   - [Swagger](http://127.0.0.1:8000/api/swagger#/)
+   - [Elements](http://127.0.0.1:8000/api/elements/)
+2. Use the auto-generated API docs to interact with the API
+
+From around the web:
+
+Browse to https://niapi.app/ and use the front page form, API, or `curl`
+to interact with the API.
 
 ## Contributing
 
@@ -106,3 +126,4 @@ tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resource
 
 ![home.png](docs/images/index.png)
 ![home-dark.png](docs/images/index-dark.png)
+![img.png](docs/images/output.png)
