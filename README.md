@@ -81,8 +81,8 @@ app calculate "10.248.15.39/29"
 Using the API
 
 1. Browse to:
-   - [Swagger](http://127.0.0.1:8000/api/swagger#/)
-   - [Elements](http://127.0.0.1:8000/api/elements/)
+   - [Swagger Web](https://niapi.app/api/swagger#/) or [Swagger Localhost](http://127.0.0.1:8000/api/swagger#/)
+   - [Elements](https://niapi.app/api/elements/) or [Elements Localhost](http://127.0.0.1:8000/api/elements/)
 2. Use the auto-generated API docs to interact with the API
 
 From around the web:
