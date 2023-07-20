@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import ipaddress
-from typing import TYPE_CHECKING, Annotated
+from typing import Annotated
 
 from litestar import Controller, get
 
@@ -15,8 +15,7 @@ from litestar.contrib.htmx.response import HTMXTemplate
 from app.domain import urls
 from app.domain.calculator.schema import NetworkInfo
 
-if TYPE_CHECKING:
-    from litestar.contrib.htmx.request import HTMXRequest
+from litestar.contrib.htmx.request import HTMXRequest  # noqa
 
 
 class CalculatorController(Controller):
