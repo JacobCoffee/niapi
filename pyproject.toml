@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "niapi"
-version = "0.5.1"
+version = "0.5.2"
 description = "Network Data API"
 authors = ["Jacob Coffee <jacob@z7x.org>"]
 maintainers = [

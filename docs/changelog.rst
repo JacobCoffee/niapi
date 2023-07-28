@@ -4,11 +4,22 @@ Changelog
 
 All commits to this project will be documented in this file.
 
+`Release [v0.5.2] - 2023-07-28 <https://github.com/JacobCoffee/niapi/releases/tag/v0.5.2>`_
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* `See All commits in v0.5.2 <https://github.com/JacobCoffee/niapi/commits/v0.5.2>`_
+
+`444a2ca <https://github.com/JacobCoffee/niapi/commit/444a2caac3d712396b2ea24f01b48a643e1a4fe1>`_ ... `bd0502c <https://github.com/JacobCoffee/niapi/commit/bd0502c65c361ff4a74aae272d13925f680dae7b>`_ | `See diff for 0.5.2 <https://github.com/JacobCoffee/niapi/compare/444a2caac3d712396b2ea24f01b48a643e1a4fe1...bd0502c65c361ff4a74aae272d13925f680dae7b>`_
+
+Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`bd0502c <https://github.com/JacobCoffee/niapi/commit/bd0502c65c361ff4a74aae272d13925f680dae7b>`_)  - Litestar 2.0b4 and pydantic v2 (Jacob Coffee)
+
 `Release [v0.5.1] - 2023-07-28 <https://github.com/JacobCoffee/niapi/releases/tag/v0.5.1>`_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * `See All commits in v0.5.1 <https://github.com/JacobCoffee/niapi/commits/v0.5.1>`_
 
-`2a422df <https://github.com/JacobCoffee/niapi/commit/2a422df3883be1bf275b5034214d3adfc041fa48>`_ ... `6e2dded <https://github.com/JacobCoffee/niapi/commit/6e2ddedebcbcb84890ff43d4fb7c661cea934877>`_ | `See diff for 0.5.1 <https://github.com/JacobCoffee/niapi/compare/2a422df3883be1bf275b5034214d3adfc041fa48...6e2ddedebcbcb84890ff43d4fb7c661cea934877>`_
+`2a422df <https://github.com/JacobCoffee/niapi/commit/2a422df3883be1bf275b5034214d3adfc041fa48>`_ ... `444a2ca <https://github.com/JacobCoffee/niapi/commit/444a2caac3d712396b2ea24f01b48a643e1a4fe1>`_ | `See diff for 0.5.1 <https://github.com/JacobCoffee/niapi/compare/2a422df3883be1bf275b5034214d3adfc041fa48...444a2caac3d712396b2ea24f01b48a643e1a4fe1>`_
 
 Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
