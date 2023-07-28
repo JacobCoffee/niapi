@@ -49,13 +49,6 @@ jobs:
         with:
           path: .venv
           key: v1-venv-${{ runner.os }}-${{ inputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Load cached pip wheels
-        if: runner.os == 'Windows'
-        id: cached-pip-wheels
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache
-          key: cache-${{ runner.os }}-${{ inputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - name: Install dependencies
         run: poetry install --no-interaction
       - name: Set pythonpath
