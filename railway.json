@@ -4,6 +4,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "litestar --app src.app:app run -H 0.0.0.0 -p $PORT"
+    "startCommand": "litestar run -H 0.0.0.0 -p $PORT"
   }
 }

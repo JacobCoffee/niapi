@@ -12,16 +12,10 @@ homepage = "https://github.com/JacobCoffee/niapi"
 repository = "https://github.com/JacobCoffee/niapi"
 documentation = "https://jacobcoffee.github.io/niapi/index.html"
 keywords = [
-    "niapi",
     "network",
     "api",
-    "tool",
-    "rest",
     "http",
-    "asgi",
-    "pydantic",
     "litestar",
-    "starlite",
     "websocket",
 ]
 classifiers = [
