@@ -92,7 +92,7 @@ docs-serve: docs-clean ## Serve the docs locally
 	$(POETRY_RUN_BIN) $(SPHINXAUTOBUILD) docs docs/_build/ -j auto --watch app --watch docs --watch tests --watch CONTRIBUTING.rst --port 8002
 
 docs: docs-clean ## Dump the existing built docs and rebuild them
-	$(POETRY_RUN_BIN) $(SPHINXBUILD) docs docs/_build/ -E -a -j auto --keep-going
+	$(POETRY_RUN_BIN) $(SPHINXBUILD) -M html docs docs/_build/ -E -a -j auto --keep-going
 
 # =============================================================================
 # Main

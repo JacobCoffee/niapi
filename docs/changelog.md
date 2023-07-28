@@ -2,29 +2,36 @@
 
 All commits to this project will be documented in this file.
 
-## [Release \[v0.4.0\] - 2023-06-26](https://github.com/JacobCoffee/niapi/releases/tag/v0.4.0)
+## [Release \[v0.5.0\] - 2023-07-20](https://github.com/JacobCoffee/niapi/releases/tag/v0.5.0)
 
-- [See All commits in v0.4.0](https://github.com/JacobCoffee/niapi/commits/v0.4.0)
+- [See All commits in v0.5.0](https://github.com/JacobCoffee/niapi/commits/v0.5.0)
 
-[dfabc63](https://github.com/JacobCoffee/niapi/commit/dfabc63f117c2f29feb88367f601cf73767f1949) \... [ed211df](https://github.com/JacobCoffee/niapi/commit/ed211dfdf8a449e157e42ef13b3b858c2075bb59) \| [See diff for 0.4.0](https://github.com/JacobCoffee/niapi/compare/dfabc63f117c2f29feb88367f601cf73767f1949...ed211dfdf8a449e157e42ef13b3b858c2075bb59)
+[bcb7dc4](https://github.com/JacobCoffee/niapi/commit/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7) \... [cbf9ebc](https://github.com/JacobCoffee/niapi/commit/cbf9ebc47f0833c82639331da6c864ae2257c9e8) \| [See diff for 0.5.0](https://github.com/JacobCoffee/niapi/compare/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7...cbf9ebc47f0833c82639331da6c864ae2257c9e8)
 
 ### Bug Fixes
 
-- ([6956665](https://github.com/JacobCoffee/niapi/commit/695666550d9b074396b5e443bacece7da66da116)) - Resolves issue with [mypy]{.title-ref} (read: me) being stupid (Jacob Coffee)
-
-### Documentation
-
-- ([ed211df](https://github.com/JacobCoffee/niapi/commit/ed211dfdf8a449e157e42ef13b3b858c2075bb59)) - Update markdown changelog (Jacob Coffee)
+- ([678c012](https://github.com/JacobCoffee/niapi/commit/678c012a55e50851b6680ecfc82d39b6dd1c76f3)) - Add missed files (Jacob Coffee)
+- ([caca27e](https://github.com/JacobCoffee/niapi/commit/caca27e13ae453273e500f6a9950b97117df67a9)) - Fix ci linting breaks (Jacob Coffee)
+- ([ce95c64](https://github.com/JacobCoffee/niapi/commit/ce95c64836fd140f940c414dfe7b19cb52ed966a)) - Adjust README (Jacob Coffee)
+- ([3e594df](https://github.com/JacobCoffee/niapi/commit/3e594df77ec76f1de2cf0570e9f1e2b43bedc7e3)) - Update mobile menu (Jacob Coffee)
 
 ### Features
 
-- ([8ecf62e](https://github.com/JacobCoffee/niapi/commit/8ecf62e0c4c043c1a9c8a1ccd0440a5da76b6cb7)) - Adds api menu dropdown (Jacob Coffee)
+- ([7fa0075](https://github.com/JacobCoffee/niapi/commit/7fa00751763cffc18a1cc59024a999e4b5044858)) - Add calculator with htmx (Jacob Coffee)
+
+### Miscellaneous Tasks
+
+- ([b287fe8](https://github.com/JacobCoffee/niapi/commit/b287fe8a1446d47c991400bc617c8e35b2cee345)) - Remove changes done to play with pypi (Jacob Coffee)
+- ([53a9849](https://github.com/JacobCoffee/niapi/commit/53a98494784607c12be691ef856333a1744a68ba)) - Add [LITESTAR\_APP]{.title-ref} var (Jacob Coffee)
+- ([392d2f9](https://github.com/JacobCoffee/niapi/commit/392d2f92947e4f500164d6fe705b5e3c687f1f07)) - Style cleanup (Jacob Coffee)
+- ([b5abd60](https://github.com/JacobCoffee/niapi/commit/b5abd608458d7c340044a5b4c211d2f5c6ff9293)) - Attempt to fix static file issues (Jacob Coffee)
+- ([cbf9ebc](https://github.com/JacobCoffee/niapi/commit/cbf9ebc47f0833c82639331da6c864ae2257c9e8)) - Attempt to fix static file issues (Jacob Coffee)
 
 ## [Release \[v0.4.0\] - 2023-06-26](https://github.com/JacobCoffee/niapi/releases/tag/v0.4.0)
 
 - [See All commits in v0.4.0](https://github.com/JacobCoffee/niapi/commits/v0.4.0)
 
-[4487fc5](https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa) \... [dfabc63](https://github.com/JacobCoffee/niapi/commit/dfabc63f117c2f29feb88367f601cf73767f1949) \| [See diff for 0.4.0](https://github.com/JacobCoffee/niapi/compare/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa...dfabc63f117c2f29feb88367f601cf73767f1949)
+[4487fc5](https://github.com/JacobCoffee/niapi/commit/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa) \... [bcb7dc4](https://github.com/JacobCoffee/niapi/commit/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7) \| [See diff for 0.4.0](https://github.com/JacobCoffee/niapi/compare/4487fc5f16f4b1f5c2e2d49b7e7571f8fe5564aa...bcb7dc4b7e12e0d47494eb6bfef614706c63cce7)
 
 ### Bug Fixes
 
@@ -36,6 +43,8 @@ All commits to this project will be documented in this file.
 - ([0f6d4e3](https://github.com/JacobCoffee/niapi/commit/0f6d4e3690d22a68c86d6973b2962fc5ab11dc0c)) - Update poetry (Jacob Coffee)
 - ([e77301a](https://github.com/JacobCoffee/niapi/commit/e77301af8d313b3b006225d3965887c586b7860e)) - Remove macos-latest (Jacob Coffee)
 - ([93f98b5](https://github.com/JacobCoffee/niapi/commit/93f98b5fcadfaa2457d926ae3ad372fa740827a6)) - Disable poetry lock for now and re-add macos-latest (Jacob Coffee)
+- ([6956665](https://github.com/JacobCoffee/niapi/commit/695666550d9b074396b5e443bacece7da66da116)) - Resolves issue with [mypy]{.title-ref} (read: me) being stupid (Jacob Coffee)
+- ([bcb7dc4](https://github.com/JacobCoffee/niapi/commit/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7)) - Bump pyproject version (Jacob Coffee)
 
 ### Documentation
 
@@ -48,10 +57,12 @@ All commits to this project will be documented in this file.
 - ([918beb8](https://github.com/JacobCoffee/niapi/commit/918beb8359a23d15e64bdda0554e8622f0f9173e)) - Update litestar badge style (Jacob Coffee)
 - ([0d39c83](https://github.com/JacobCoffee/niapi/commit/0d39c83b7407e5863661fcdfe503eaa13da89b66)) - Full api documentation (Jacob Coffee)
 - ([b941934](https://github.com/JacobCoffee/niapi/commit/b941934419e7ced3f44ae15db8875ea07a49e4b5)) - Introduces api reference docs (Jacob Coffee)
+- ([ed211df](https://github.com/JacobCoffee/niapi/commit/ed211dfdf8a449e157e42ef13b3b858c2075bb59)) - Update markdown changelog (Jacob Coffee)
 
 ### Features
 
 - ([cb4d292](https://github.com/JacobCoffee/niapi/commit/cb4d292e0910b58183ff6743e4232fbbb0961107)) - Add some tests (Jacob Coffee)
+- ([8ecf62e](https://github.com/JacobCoffee/niapi/commit/8ecf62e0c4c043c1a9c8a1ccd0440a5da76b6cb7)) - Adds api menu dropdown (Jacob Coffee)
 
 ### Miscellaneous Tasks
 
