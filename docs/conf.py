@@ -35,7 +35,7 @@ extensions = [
     "sphinx_click",
     "sphinx_toolbox.collapse",
     # "sphinx_design",  # not available in 7.0
-    "sphinxcontrib.autodoc_pydantic",
+    # "sphinxcontrib.autodoc_pydantic",  # needs pydantic v2 support
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
