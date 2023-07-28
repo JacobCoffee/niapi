@@ -1,7 +1,10 @@
 name: Documentation Building
+
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+
 jobs:
   docs:
     permissions:
