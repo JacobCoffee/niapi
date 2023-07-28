@@ -4,15 +4,26 @@ from __future__ import annotations
 import binascii
 import os
 from pathlib import Path
-from typing import Final
+from typing import TYPE_CHECKING, Final
 
 from dotenv import load_dotenv
 from litestar.contrib.jinja import JinjaTemplateEngine
-from litestar.data_extractors import RequestExtractorField, ResponseExtractorField  # noqa: TCH002
-from pydantic import BaseSettings, SecretBytes, ValidationError, validator
+from litestar.data_extractors import RequestExtractorField, ResponseExtractorField  # noqa: TCH002  # noqa: TCH002
+from pydantic import (
+    SecretBytes,
+    ValidationError,
+    field_validator,
+)
+from pydantic_settings import (
+    BaseSettings,
+    SettingsConfigDict,
+)
 
 from app import utils
 from app.metadata import __version__ as version
+
+if TYPE_CHECKING:
+    from pydantic_core.core_schema import FieldValidationInfo
 
 __all__ = (
     "APISettings",
@@ -25,7 +36,6 @@ __all__ = (
     "load_settings",
 )
 
-
 load_dotenv()
 
 DEFAULT_MODULE_NAME = "app"
@@ -37,16 +47,7 @@ TEMPLATES_DIR = Path(BASE_DIR / "domain" / "web" / "templates")
 class ServerSettings(BaseSettings):
     """Server configurations."""
 
-    class Config:
-        """Pydantic Config.
-
-        .. note:: See https://docs.pydantic.dev/usage/settings/#settings-configuration
-
-        """
-
-        case_sensitive = True
-        env_file = ".env"
-        env_prefix = "SERVER_"
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env", env_prefix="SERVER_")
 
     APP_LOC: str = "app.asgi:create_app"
     """Path to app executable, or factory."""
@@ -75,14 +76,12 @@ class AppSettings(BaseSettings):
 
     These settings are returned as JSON by the healthcheck endpoint, so
     do not include any sensitive values here, or if you do ensure to
-    exclude them from serialization in the ``Config`` object.
+    exclude them from serialization in the ``model_config`` object.
     """
 
-    class Config:
-        """App settings config."""
-
-        case_sensitive = True
-        env_file = ".env"
+    model_config = SettingsConfigDict(
+        env_file=".env", env_file_encoding="utf-8", env_prefix="APP_", case_sensitive=False
+    )
 
     BUILD_NUMBER: str = ""
     """Identifier for CI build."""
@@ -133,7 +132,8 @@ class AppSettings(BaseSettings):
         """
         return "-".join(s.lower() for s in self.NAME.split())
 
-    @validator("BACKEND_CORS_ORIGINS", pre=True, allow_reuse=True)
+    @field_validator("BACKEND_CORS_ORIGINS", mode="before")
+    @classmethod
     def assemble_cors_origins(
         cls,
         value: str | list[str],
@@ -157,33 +157,26 @@ class AppSettings(BaseSettings):
             return list(value)
         raise ValueError(value)
 
-    @validator("SECRET_KEY", pre=True, always=True, allow_reuse=True)
-    def generate_secret_key(
-        cls,
-        value: SecretBytes | None,
-    ) -> SecretBytes:
+    @field_validator("SECRET_KEY", mode="before")
+    def generate_secret_key(cls, value: str | None, info: FieldValidationInfo) -> SecretBytes:
         """Generate a secret key.
 
         Args:
             value: A secret key, or ``None``.
+            info: Field validation info.
 
         Returns:
             A secret key.
         """
         if value is None:
             return SecretBytes(binascii.hexlify(os.urandom(32)))
-        return value
+        return SecretBytes(value.encode())
 
 
 class APISettings(BaseSettings):
     """API specific configuration."""
 
-    class Config:
-        """API specific configuration."""
-
-        case_sensitive = True
-        env_file = ".env"
-        env_prefix = "API_"
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env", env_prefix="API_")
 
     CACHE_EXPIRATION: int = 60
     """Default cache key expiration in seconds."""
@@ -196,12 +189,7 @@ class APISettings(BaseSettings):
 class LogSettings(BaseSettings):
     """Logging config for the Network Information API."""
 
-    class Config:
-        """Logging config for the Network Information API."""
-
-        case_sensitive = True
-        env_file = ".env"
-        env_prefix = "LOG_"
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env", env_prefix="LOG_")
 
     """https://stackoverflow.com/a/1845097/6560549"""
     EXCLUDE_PATHS: str = r"\A(?!x)x"
@@ -261,12 +249,7 @@ class LogSettings(BaseSettings):
 class OpenAPISettings(BaseSettings):
     """Configures OpenAPI for the Network Information API."""
 
-    class Config:
-        """Configures OpenAPI for the Network Information API."""
-
-        case_sensitive = True
-        env_file = ".env"
-        env_prefix = "OPENAPI_"
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env", env_prefix="OPENAPI_")
 
     CONTACT_NAME: str = "Admin"
     """Name of contact on document."""
@@ -289,7 +272,8 @@ class OpenAPISettings(BaseSettings):
     }
     """External documentation for the API."""
 
-    @validator("SERVERS", pre=True, allow_reuse=True)
+    @field_validator("SERVERS", mode="before")
+    @classmethod
     def assemble_openapi_servers(cls, value: list[dict[str, str]]) -> list[dict[str, str]]:
         """Assembles the OpenAPI servers based on the environment.
 
@@ -317,12 +301,7 @@ class OpenAPISettings(BaseSettings):
 class TemplateSettings(BaseSettings):
     """Configures Templating for the Network Information API."""
 
-    class Config:
-        """Configures Templating for the Network Information API."""
-
-        case_sensitive = True
-        env_file = ".env"
-        env_prefix = "TEMPLATE_"
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env", env_prefix="TEMPLATE_")
 
     ENGINE: type[JinjaTemplateEngine] = JinjaTemplateEngine
     """Template engine to use. (Jinja2 or Mako)"""
@@ -331,12 +310,7 @@ class TemplateSettings(BaseSettings):
 class HTTPClientSettings(BaseSettings):
     """HTTP Client configurations."""
 
-    class Config:
-        """HTTP Client configurations."""
-
-        case_sensitive = True
-        env_file = ".env"
-        env_prefix = "HTTP_"
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env", env_prefix="HTTP_")
 
     BACKOFF_MAX: float = 60
     BACKOFF_MIN: float = 0
@@ -379,15 +353,15 @@ def load_settings() -> (
     """
     try:
         """Override Application reload dir."""
-        server: ServerSettings = ServerSettings.parse_obj(
+        server: ServerSettings = ServerSettings.model_validate(
             {"HOST": "0.0.0.0", "RELOAD_DIRS": [str(BASE_DIR)]},  # noqa: S104
         )
-        app: AppSettings = AppSettings.parse_obj({})
-        api: APISettings = APISettings.parse_obj({})
-        openapi: OpenAPISettings = OpenAPISettings.parse_obj({})
-        template: TemplateSettings = TemplateSettings.parse_obj({})
-        log: LogSettings = LogSettings.parse_obj({})
-        http_client: HTTPClientSettings = HTTPClientSettings.parse_obj({})
+        app: AppSettings = AppSettings.model_validate({})
+        api: APISettings = APISettings.model_validate({})
+        openapi: OpenAPISettings = OpenAPISettings.model_validate({})
+        template: TemplateSettings = TemplateSettings.model_validate({})
+        log: LogSettings = LogSettings.model_validate({})
+        http_client: HTTPClientSettings = HTTPClientSettings.model_validate({})
 
     except ValidationError as error:
         print(f"Could not load settings. Error: {error!r}")  # noqa: T201

@@ -4,11 +4,32 @@ Changelog
 
 All commits to this project will be documented in this file.
 
+`Release [v0.5.1] - 2023-07-28 <https://github.com/JacobCoffee/niapi/releases/tag/v0.5.1>`_
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* `See All commits in v0.5.1 <https://github.com/JacobCoffee/niapi/commits/v0.5.1>`_
+
+`2a422df <https://github.com/JacobCoffee/niapi/commit/2a422df3883be1bf275b5034214d3adfc041fa48>`_ ... `6e2dded <https://github.com/JacobCoffee/niapi/commit/6e2ddedebcbcb84890ff43d4fb7c661cea934877>`_ | `See diff for 0.5.1 <https://github.com/JacobCoffee/niapi/compare/2a422df3883be1bf275b5034214d3adfc041fa48...6e2ddedebcbcb84890ff43d4fb7c661cea934877>`_
+
+Documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`ca5db18 <https://github.com/JacobCoffee/niapi/commit/ca5db180509fed42055eb8b1f5e9914c09415915>`_)  - Update README.md (Jacob Coffee)
+
+Miscellaneous Tasks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`6e2dded <https://github.com/JacobCoffee/niapi/commit/6e2ddedebcbcb84890ff43d4fb7c661cea934877>`_)  - Update files (Jacob Coffee)
+
+Ci
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`3b5cefb <https://github.com/JacobCoffee/niapi/commit/3b5cefbf47af61ab61f1cf797aa42d31327fa43f>`_)  - Disable windows checking (Jacob Coffee)
+
 `Release [v0.5.0] - 2023-07-20 <https://github.com/JacobCoffee/niapi/releases/tag/v0.5.0>`_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * `See All commits in v0.5.0 <https://github.com/JacobCoffee/niapi/commits/v0.5.0>`_
 
-`bcb7dc4 <https://github.com/JacobCoffee/niapi/commit/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7>`_ ... `cbf9ebc <https://github.com/JacobCoffee/niapi/commit/cbf9ebc47f0833c82639331da6c864ae2257c9e8>`_ | `See diff for 0.5.0 <https://github.com/JacobCoffee/niapi/compare/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7...cbf9ebc47f0833c82639331da6c864ae2257c9e8>`_
+`bcb7dc4 <https://github.com/JacobCoffee/niapi/commit/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7>`_ ... `2a422df <https://github.com/JacobCoffee/niapi/commit/2a422df3883be1bf275b5034214d3adfc041fa48>`_ | `See diff for 0.5.0 <https://github.com/JacobCoffee/niapi/compare/bcb7dc4b7e12e0d47494eb6bfef614706c63cce7...2a422df3883be1bf275b5034214d3adfc041fa48>`_
 
 Bug Fixes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

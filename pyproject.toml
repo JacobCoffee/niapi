@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "niapi"
-version = "0.5.0"
+version = "0.5.1"
 description = "Network Data API"
 authors = ["Jacob Coffee <jacob@z7x.org>"]
 maintainers = [
@@ -59,9 +59,11 @@ run-all = "app.cli:run_all_app"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
-litestar = {version = "2.0b2", extras = ["standard", "structlog", "prometheus"]}
+litestar = {version = "2.0b4", extras = ["standard", "structlog", "prometheus"]}
 python-dotenv = "^1.0.0"
 poetry = "^1.5.1"
+pydantic = "^2.1.1"
+pydantic-settings = "^2.0.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
@@ -239,6 +241,7 @@ max-complexity = 12
 classmethod-decorators = [
     "classmethod",
     "pydantic.root_validator",
+    "pydantic.field_validator",
     "pydantic.validator",
 ]
 

@@ -31,7 +31,7 @@ def _default(value: Any) -> str:
         str: The encoded value
     """
     if isinstance(value, BaseModel):
-        return str(value.dict(by_alias=True))
+        return value.model_dump_json(by_alias=True)
     try:
         val = str(value)
     except Exception as exc:  # noqa: BLE001
