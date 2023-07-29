@@ -95,32 +95,67 @@ suppress_warnings = [
 ]
 
 # -- Style configuration -----------------------------------------------------
-html_theme = "pydata_sphinx_theme"
+html_theme = "shibuya"
 html_static_path = ["_static"]
-html_css_files = ["css/custom.css"]
+html_css_files = [
+    "css/custom.css",
+]
 html_show_sourcelink = True
 html_title = "Docs"
 html_favicon = "_static/badge.svg"
 html_logo = "_static/badge.svg"
+html_context = {
+    "source_type": "github",
+    "source_user": "JacobCoffee",
+    "source_repo": "niapi",
+}
+
+brand_colors = {
+    "--brand-main": "66, 177, 168",
+}
 
 html_theme_options = {
-    "show_toc_level": 2,
-    "logo": {
-        "link": "https://github.com/JacobCoffee/niapi",
-    },
-    "navbar_align": "left",
-    "icon_links": [
+    "logo_target": "/",
+    "announcement": "This documentation is currently under development.",
+    "github_url": "https://github.com/JacobCoffee/niapi",
+    "discord_url": "https://discord.gg/ZVG8hN6RrJ/",
+    "twitter_url": "https://twitter.com/_scriptr",
+    "youtube_url": "https://youtube.com/@monorepo",
+    "nav_links": [
+        {"title": "Dashboard", "url": "https://niapi.app/"},
         {
-            "name": "Github",
-            "url": "https://github.com/JacobCoffee/niapi",
-            "icon": "fa-brands fa-github",
-            "type": "fontawesome",
+            "title": "Sponsor me",
+            "url": "https://github.com/sponsors/JacobCoffee",
+            "icon": "accessibility",
         },
     ],
-    "external_links": [
-        {"name": "Dashboard", "url": os.getenv("NIAPI_URL")},
-    ],
-    "announcement": "This documentation is currently under development.",
-    "navbar_end": ["navbar-icon-links"],
-    "navbar_persistent": ["search-button", "theme-switcher"],
+    # TODO: commented sections appear to not work?
+    "light_css_variables": {
+        "--sy-rc-theme": "66, 177, 168",
+        # "--sy-c-foot-bg": "255, 0, 0",
+        "--sy-c-foot-divider": brand_colors["--brand-main"],
+        # "--sy-c-foot-text": "255, 0, 0",
+        # "--sy-c-bold": "255, 0, 0",
+        "--sy-c-heading": brand_colors["--brand-main"],
+        # "--sy-c-text-weak": "255, 0, 0",
+        # "--sy-c-text": "255, 0, 0",
+        "--sy-rc-text": brand_colors["--brand-main"],
+        # "--sy-rc-invert": "255, 0, 0",
+        # "--sy-rc-bg": "255, 0, 0",
+        "--sy-c-link": brand_colors["--brand-main"],
+    },
+    "dark_css_variables": {
+        "--sy-rc-theme": "66, 177, 168",
+        "--sy-c-foot-bg": brand_colors["--brand-main"],
+        "--sy-c-foot-divider": brand_colors["--brand-main"],
+        # "--sy-c-foot-text": "255, 0, 0",
+        # "--sy-c-bold": "255, 0, 0",
+        "--sy-c-heading": brand_colors["--brand-main"],
+        # "--sy-c-text-weak": "255, 0, 0",
+        # "--sy-c-text": "255, 0, 0",
+        "--sy-rc-text": brand_colors["--brand-main"],
+        # "--sy-rc-invert": "255, 0, 0",
+        # "--sy-rc-bg": "255, 0, 0",
+        "--sy-c-link": brand_colors["--brand-main"],
+    },
 }

@@ -1,7 +1,9 @@
 name: Latest Release
+
 on:
   release:
     types: [published]
+
 jobs:
   publish-release:
     if: always()
@@ -9,16 +11,24 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+
       - name: Set up python 3.11
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+
+      - uses: pdm-project/setup-pdm@v3
+        name: Setup PDM
+        with:
+          python-version: 3.11
+          allow-python-prereleases: true
+          cache: true
+
       - name: Install dependencies
-        run: poetry install --no-interaction --no-root --no-dev
-      - name: publish
-        shell: bash
-        run: |
-          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-          poetry publish --build --no-interaction
+        run: pdm install
+# TODO: Learn then move to Hatchling build/PDM publish... whatever
+#      - name: publish
+#        shell: bash
+#        run: |
+#          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+#          poetry publish --build --no-interaction

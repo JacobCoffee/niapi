@@ -1,0 +1,6 @@
+# Code owner settings for `litestar-template`
+# Most specific assignment takes precedence though, so if you add a more specific thing than the `*` glob, you must also add @SomeUser
+# For more info about code owners see https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners#codeowners-file-example
+
+# Global Assignment
+*      @JacobCoffee

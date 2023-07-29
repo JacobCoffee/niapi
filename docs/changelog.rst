@@ -4,11 +4,33 @@ Changelog
 
 All commits to this project will be documented in this file.
 
+[unreleased]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`05f3aae <https://github.com/JacobCoffee/niapi/commit/05f3aaeabac0d7186446a02dc492ce760dbb5c68>`_)  - Remove pydantic autodoc for now (Jacob Coffee)
+* (`d764ba2 <https://github.com/JacobCoffee/niapi/commit/d764ba26f8911b873c407dd0178fce4058c34d5b>`_)  - Remove pydantic autodoc for now (Jacob Coffee)
+* (`ba105a7 <https://github.com/JacobCoffee/niapi/commit/ba105a72e825656b93652f9351ceb011c03989d6>`_)  - Add missing repo checkout (Jacob Coffee)
+* (`827999f <https://github.com/JacobCoffee/niapi/commit/827999fd841a358669114f563f02fb405bcc4b61>`_)  - Update env var (Jacob Coffee)
+
+Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`e8007c7 <https://github.com/JacobCoffee/niapi/commit/e8007c796531a86ec8229a448f0afee28032ff72>`_)  - Migrate to pdm (Jacob Coffee)
+
+Ci
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* (`688c897 <https://github.com/JacobCoffee/niapi/commit/688c897954fb03c2e5f1820476217b71bf9dea59>`_)  - Fix build event (Jacob Coffee)
+* (`aad76bc <https://github.com/JacobCoffee/niapi/commit/aad76bcaa649d5c07365453dc030db77817c52b1>`_)  - Remove snyk (Jacob Coffee)
+
 `Release [v0.5.2] - 2023-07-28 <https://github.com/JacobCoffee/niapi/releases/tag/v0.5.2>`_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * `See All commits in v0.5.2 <https://github.com/JacobCoffee/niapi/commits/v0.5.2>`_
 
-`444a2ca <https://github.com/JacobCoffee/niapi/commit/444a2caac3d712396b2ea24f01b48a643e1a4fe1>`_ ... `bd0502c <https://github.com/JacobCoffee/niapi/commit/bd0502c65c361ff4a74aae272d13925f680dae7b>`_ | `See diff for 0.5.2 <https://github.com/JacobCoffee/niapi/compare/444a2caac3d712396b2ea24f01b48a643e1a4fe1...bd0502c65c361ff4a74aae272d13925f680dae7b>`_
+`444a2ca <https://github.com/JacobCoffee/niapi/commit/444a2caac3d712396b2ea24f01b48a643e1a4fe1>`_ ... `1e4f5ea <https://github.com/JacobCoffee/niapi/commit/1e4f5ea79df335d3661e21f6eda1947c584a3865>`_ | `See diff for 0.5.2 <https://github.com/JacobCoffee/niapi/compare/444a2caac3d712396b2ea24f01b48a643e1a4fe1...1e4f5ea79df335d3661e21f6eda1947c584a3865>`_
 
 Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
