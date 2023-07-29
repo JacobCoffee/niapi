@@ -156,7 +156,7 @@ html_theme_options = {
         "--sy-rc-invert": brand_colors["--brand-main"],
         "--sy-rc-bg": brand_colors["--brand-secondary"],
         # Hex
-        "--sy-c-link": "#for ",
+        # "--sy-c-link": "#85c7f2",
         "--sy-c-foot-bg": "#191919",
         "--sy-c-foot-divider": "#85c7f2",
         "--sy-c-foot-text": "#fff",
