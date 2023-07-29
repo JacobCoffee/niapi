@@ -20,7 +20,7 @@ on:
         default: false
 
 env:
-  SECRET_KEY: "ThisIsABadSecret"
+  APP_SECRET_KEY: "ThisIsABadSecret"
 
 jobs:
   test:

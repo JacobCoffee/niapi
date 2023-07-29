@@ -8,7 +8,7 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  SECRET_KEY: "ThisIsABadSecret"
+  APP_SECRET_KEY: "ThisIsABadSecret"
 
 jobs:
   validate:
