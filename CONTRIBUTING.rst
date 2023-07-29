@@ -4,10 +4,11 @@ Contribution guide
 Setting up the environment
 --------------------------
 
-1. Install `poetry <https://python-poetry.org/>`_
-2. Run ``poetry install`` to create a `virtual environment <https://docs.python.org/3/tutorial/venv.html>`_ and install
+1. Install `Python Driving Assistant <https://pdm.fming.dev/latest/>`_
+2. Run ``pdm install`` to create a `virtual environment <https://docs.python.org/3/tutorial/venv.html>`_ and install
    the dependencies
-3. If you're working on the documentation and need to build it locally, install the extra dependencies with ``poetry install --with docs``
+3. If you're working on the documentation and need to build it locally, install the extra dependencies with
+    ``pdm install -G docs``
 4. Install `pre-commit <https://pre-commit.com/>`_
 5. Run ``pre-commit install`` to install pre-commit hooks
 
@@ -56,14 +57,16 @@ Running the docs locally
 
 To run or build the docs locally, you need to first install the required dependencies:
 
-``poetry install --with docs``
+``pdm install -G docs``
 
 Then you can serve the documentation with ``make docs-serve``, or build them with ``make docs``.
+
+
 
 Creating a new release
 ----------------------
 
-1. Increment the version in ``pyproject.toml`` using `` poetry version <version>``. The version should follow
+1. Increment the version in ``pyproject.toml``. The version should follow
    `semantic versioning <https://semver.org/>`_ and `PEP 440 <https://www.python.org/dev/peps/pep-0440/>`_.
 2. `Draft a new release <https://github.com/JacobCoffee/niapi/releases/new>`_ on GitHub
 

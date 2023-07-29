@@ -62,7 +62,7 @@ class MissingDependencyError(ApplicationError, ValueError):
         config = config if config else module
         super().__init__(
             f"You enabled {config} configuration but package {module!r} is not installed. "
-            f'You may need to run: "poetry install niapi[{config}]"',
+            f'You may need to run: "pdm install niapi[{config}]"',
         )
 
 
