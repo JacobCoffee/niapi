@@ -68,8 +68,9 @@ run-all = "app.cli:run_all_app"
 lint = "pre-commit run --all-files"
 test = "pytest"
 docs-serve = "sphinx-autobuild docs docs/_build/ -j auto --watch app --watch docs --watch tests --watch CONTRIBUTING.rst --port 8002"
+changelog = "git cliff -c pyproject.toml -o docs/changelog.rst -t v0.5.3"
 # TODO: Move more from makefile here
-all = {composite = ["lint", "test"]}
+ci = {composite = ["lint", "test"]}
 
 [tool.pdm.dev-dependencies]
 lint = [

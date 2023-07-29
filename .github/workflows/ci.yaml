@@ -157,3 +157,18 @@ jobs:
           path: |
             docs/_build/html
             .pr_number
+
+  changelog:
+    needs:
+      - test
+      - validate
+    if: github.event.pull_request.head.repo.fork == false && github.repository_owner == 'JacobCoffee'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v2
+        with:
+          config: cliff.toml
+          args: --verbose
+        env:
+          OUTPUT: changelog.rst
