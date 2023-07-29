@@ -111,7 +111,9 @@ html_context = {
 }
 
 brand_colors = {
-    "--brand-main": "66, 177, 168",
+    "--brand-main": "133, 199, 242",
+    "--brand-secondary": "99, 99, 99",
+    "--brand-alert": "241, 81, 82",
 }
 
 html_theme_options = {
@@ -131,31 +133,37 @@ html_theme_options = {
     ],
     # TODO: commented sections appear to not work?
     "light_css_variables": {
-        "--sy-rc-theme": "66, 177, 168",
-        # "--sy-c-foot-bg": "255, 0, 0",
-        "--sy-c-foot-divider": brand_colors["--brand-main"],
-        # "--sy-c-foot-text": "255, 0, 0",
-        # "--sy-c-bold": "255, 0, 0",
-        "--sy-c-heading": brand_colors["--brand-main"],
-        # "--sy-c-text-weak": "255, 0, 0",
-        # "--sy-c-text": "255, 0, 0",
+        # RGB
+        "--sy-rc-theme": brand_colors["--brand-main"],
         "--sy-rc-text": brand_colors["--brand-main"],
-        # "--sy-rc-invert": "255, 0, 0",
-        # "--sy-rc-bg": "255, 0, 0",
-        "--sy-c-link": brand_colors["--brand-main"],
+        "--sy-rc-invert": brand_colors["--brand-main"],
+        # "--sy-rc-bg": brand_colors["--brand-secondary"],
+        # Hex
+        "--sy-c-link": "#for ",
+        # "--sy-c-foot-bg": "#191919",
+        "--sy-c-foot-divider": "#85c7f2",
+        # "--sy-c-foot-text": "#191919",
+        "--sy-c-bold": "#85c7f2",
+        "--sy-c-heading": "#85c7f2",
+        # "--sy-c-text-weak": "#85c7f2",
+        # "--sy-c-text": "#191919",
+        "--sy-c-bg-weak": "#383838",
     },
     "dark_css_variables": {
-        "--sy-rc-theme": "66, 177, 168",
-        "--sy-c-foot-bg": brand_colors["--brand-main"],
-        "--sy-c-foot-divider": brand_colors["--brand-main"],
-        # "--sy-c-foot-text": "255, 0, 0",
-        # "--sy-c-bold": "255, 0, 0",
-        "--sy-c-heading": brand_colors["--brand-main"],
-        # "--sy-c-text-weak": "255, 0, 0",
-        # "--sy-c-text": "255, 0, 0",
+        # RGB
+        "--sy-rc-theme": brand_colors["--brand-main"],
         "--sy-rc-text": brand_colors["--brand-main"],
-        # "--sy-rc-invert": "255, 0, 0",
-        # "--sy-rc-bg": "255, 0, 0",
-        "--sy-c-link": brand_colors["--brand-main"],
+        "--sy-rc-invert": brand_colors["--brand-main"],
+        "--sy-rc-bg": brand_colors["--brand-secondary"],
+        # Hex
+        "--sy-c-link": "#for ",
+        "--sy-c-foot-bg": "#191919",
+        "--sy-c-foot-divider": "#85c7f2",
+        "--sy-c-foot-text": "#fff",
+        "--sy-c-bold": "#85c7f2",
+        "--sy-c-heading": "#85c7f2",
+        "--sy-c-text-weak": "#85c7f2",
+        "--sy-c-text": "#fff",
+        "--sy-c-bg-weak": "#383838",
     },
 }
