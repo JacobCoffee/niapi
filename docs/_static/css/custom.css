@@ -7,21 +7,24 @@
 
 html.dark,
 html.light {
-  --syntax-dark-keyword: #009bff;
-  --syntax-dark-property: #85c7f2;
 }
 
 html.light {
-  --syntax-light-constant: #004976;
-  --syntax-light-text: #fff;
+  --syntax-light-constant: #009bff;
+  --syntax-light-text: #09090a;
   --syntax-light-cap-bg: #325b76;
-  --syntax-light-pre-bg: #6a6a6a;
+  --syntax-light-pre-bg: #ddefff;
+  --syntax-light-keyword: #009bff;
+  --syntax-light-property: #85c7f2;
 }
 
 html.light .yue {
   --yue-c-code-bg: #bdbdbd !important;
   --yue-c-code: #325e7b !important;
+  --yue-c-black: #11a1ff !important;
 }
 
 html.dark {
+  --syntax-dark-keyword: #009bff;
+  --syntax-dark-property: #85c7f2;
 }

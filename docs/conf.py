@@ -146,7 +146,7 @@ html_theme_options = {
         "--sy-c-bold": "#85c7f2",
         "--sy-c-heading": "#85c7f2",
         # "--sy-c-text-weak": "#85c7f2",
-        # "--sy-c-text": "#191919",
+        "--sy-c-text": "#101010",
         "--sy-c-bg-weak": "#383838",
     },
     "dark_css_variables": {
