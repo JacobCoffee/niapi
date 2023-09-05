@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
         with:
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -80,7 +80,7 @@ jobs:
   #    runs-on: ubuntu-latest
   #    steps:
   #      - name: Check out repository
-  #        uses: actions/checkout@v3
+  #        uses: actions/checkout@v4
   #
   #      - name: Run Snyk Monitor
   #        if: ${{ github.ref == 'refs/heads/main' }}
@@ -107,7 +107,7 @@ jobs:
       security-events: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Initialize CodeQL Without Dependencies
         uses: github/codeql-action/init@v2
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
