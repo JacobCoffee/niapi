@@ -82,6 +82,6 @@ class CalculatorController(Controller):
 
         return HTMXTemplate(
             template_name="partial.html",
-            context=network_info.dict(),  # Convert the pydantic model to a dict
+            context={"network_info": network_info.model_dump(by_alias=True)},
             push_url=False,
         )
