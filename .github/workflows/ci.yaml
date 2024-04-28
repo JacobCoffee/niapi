@@ -9,6 +9,7 @@ on:
 
 env:
   APP_SECRET_KEY: "ThisIsABadSecret"
+  SECRET_KEY: "ThisIsABadSecret"
 
 jobs:
   validate:

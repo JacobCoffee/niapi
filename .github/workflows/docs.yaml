@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  APP_SECRET_KEY: "ThisIsABadSecret"
+  SECRET_KEY: "ThisIsABadSecret"
+
 jobs:
   docs:
     permissions:
