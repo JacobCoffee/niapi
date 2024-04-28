@@ -12,7 +12,7 @@
 </style>
 {% endblock extrastyle %} {% block title %}Home{% endblock %} {% block body %}
 
-<form id="calculator" method="get" hx-get="/calculator/ip" hx-target="#results">
+<form id="calculator" method="get" hx-get="/calculator/ip/htmx" hx-target="#results">
   <div class="space-y-12">
     <div class="border-b border-gray-900/10 dark:border-neutral-300/30 pb-12">
       <h2 class="text-base font-semibold leading-7 text-gray-900 dark:text-neutral-200">Calculator</h2>
@@ -79,6 +79,8 @@
                       id="checksubnet"
                       name="checksubnet"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -92,6 +94,8 @@
                       id="checkwildcardsubnet"
                       name="checkwildcardsubnet"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -107,6 +111,8 @@
                       id="checktotalips"
                       name="checktotalips"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -120,6 +126,8 @@
                       id="checkusableips"
                       name="checkusableips"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -137,6 +145,8 @@
                       id="checknetworkip"
                       name="checknetworkip"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -152,6 +162,8 @@
                       id="checkgatewayip"
                       name="checkgatewayip"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -167,6 +179,8 @@
                       id="checkbroadcastip"
                       name="checkbroadcastip"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -182,6 +196,8 @@
                       id="checkfirstlastip"
                       name="checkfirstlastip"
                       type="checkbox"
+                      checked
+                      disabled
                       class="h-4 w-4 rounded border-gray-300 text-blue-400 focus:ring-blue-400" />
                   </div>
                   <div class="text-sm leading-6">
@@ -239,7 +255,7 @@
     </div>
   </div>
   <div
-    hx-post="/calculate/ip"
+    hx-post="/calculate/ip/htmx"
     hx-trigger="submit"
     hx-target="#results"
     hx-swap="outerHTML"
