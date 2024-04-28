@@ -42,7 +42,7 @@ jobs:
       - uses: pdm-project/setup-pdm@v4
         name: Setup PDM
         with:
-          python-version: 3.11
+          python-version: 3.12
           allow-python-prereleases: true
           cache: true
 

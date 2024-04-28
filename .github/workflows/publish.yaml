@@ -12,15 +12,15 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Set up python 3.11
+      - name: Set up python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       - uses: pdm-project/setup-pdm@v4
         name: Setup PDM
         with:
-          python-version: 3.11
+          python-version: 3.12
           allow-python-prereleases: true
           cache: true
 
