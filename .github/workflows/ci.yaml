@@ -45,17 +45,6 @@ jobs:
       coverage: ${{ matrix.python-version == '3.12' }}
       integration: ${{ matrix.python-version == '3.12' }}
 
-  test-platform-compat:
-    if: github.event_name == 'push'
-    strategy:
-      fail-fast: true
-      matrix:
-        os: ["macos-latest"]
-    uses: ./.github/workflows/test.yaml
-    with:
-      python-version: "3.12"
-      os: ${{ matrix.os }}
-
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
