@@ -1,14 +1,16 @@
 """Sphinx configuration."""
+
 from __future__ import annotations
 
 import importlib.metadata
 import os
 import sys
+from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
 
-from app.metadata import __project__ as project
+from app.metadata import __project__
 
 # -- Environmental Data ------------------------------------------------------
 path = Path("..").resolve()
@@ -17,8 +19,9 @@ sys.path.insert(0, path.as_posix())
 load_dotenv()
 
 # -- Project information -----------------------------------------------------
-project = project
-copyright = "2023, Jacob Coffee"
+current_year = datetime.now().year
+project = __project__
+copyright = f"{current_year}, Jacob Coffee"
 author = "Jacob Coffee"
 release = os.getenv("_NIAPI_DOCS_BUILD_VERSION", importlib.metadata.version("litestar").rsplit(".")[0])
 

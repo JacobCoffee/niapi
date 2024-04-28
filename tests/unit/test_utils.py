@@ -1,4 +1,5 @@
 """Test app/utils.py."""
+
 import re
 import string
 from dataclasses import dataclass

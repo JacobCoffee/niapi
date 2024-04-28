@@ -30,6 +30,14 @@ upgrade:       ## Upgrade all dependencies to the latest stable versions
 	@if [ "$(USING_PDM)" ]; then $(PDM) update; fi
 	@echo "Dependencies Updated"
 
+.PHONY: refresh-lockfiles
+refresh-lockfiles:                                 ## Sync lockfiles with requirements files.
+	$(PDM) update --update-reuse -G:all
+
+.PHONY: lock
+lock:                                             ## Rebuild lockfiles from scratch, updating all dependencies
+	$(PDM) update --update-eager -G:all
+
 # =============================================================================
 # Developer Utils
 # =============================================================================
@@ -132,8 +140,8 @@ develop: install ## Install the project in dev mode.
 	if [ "$(VENV_EXISTS)" && ! -f .env ]; then cp .env.example .env; fi
 	@echo "=> Install complete! Note: If you want to re-install re-run 'make develop'"
 
-run-dev-server: ## Run the app in dev mode
-	$(PDM_RUN_BIN) app run server --http-workers 1 --reload
+serve: ## Run the app in dev mode
+	$(PDM_RUN_BIN) app run-all --http-workers 1 --reload
 
 run-dev-frontend: ## Run the app frontend in dev mode
 	$(PDM_RUN_BIN) tailwindcss -i app/domain/web/resources/input.css -o app/domain/web/resources/style.css --watch

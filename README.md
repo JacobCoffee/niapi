@@ -87,8 +87,7 @@ Using the API
 
 From around the web:
 
-Browse to https://niapi.app/ and use the front page form, API, or `curl`
-to interact with the API.
+Browse to https://niapi.app/ and use the front page form, API, or `curl` to interact with the API.
 
 ## Contributing
 
@@ -124,6 +123,4 @@ tailwindcss -i niapi/domain/web/resources/input.css -o niapi/domain/web/resource
 
 [//]: # "TODO"
 
-![home.png](docs/images/index.png)
-![home-dark.png](docs/images/index-dark.png)
-![img.png](docs/images/output.png)
+![home.png](docs/images/index.png) ![home-dark.png](docs/images/index-dark.png) ![img.png](docs/images/output.png)

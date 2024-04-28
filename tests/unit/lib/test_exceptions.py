@@ -1,4 +1,5 @@
 """Test app/lib/exceptions.py."""
+
 from typing import TYPE_CHECKING
 from unittest.mock import ANY, MagicMock
 

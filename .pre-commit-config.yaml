@@ -1,8 +1,8 @@
 default_language_version:
-  python: "3.11"
+  python: "3.12"
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.6.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -21,40 +21,41 @@ repos:
       - id: check-yaml
         args: [--unsafe]
   - repo: https://github.com/pdm-project/pdm
-    rev: 2.8.1
+    rev: 2.15.1
     hooks:
       - id: pdm-lock-check
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v2.3.0
+    rev: v3.2.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.0.280"
+    rev: "v0.4.2"
     hooks:
       - id: ruff
         args: ["--fix"]
+      - id: ruff-format
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.5
+    rev: v2.2.6
     hooks:
       - id: codespell
         exclude: "tests/openiapi/typescript_converter/test_converter"
-  - repo: https://github.com/psf/black
-    rev: 23.7.0
-    hooks:
-      - id: black
-        args: [--config=./pyproject.toml]
   - repo: https://github.com/asottile/blacken-docs
-    rev: 1.15.0
+    rev: 1.16.0
     hooks:
       - id: blacken-docs
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v3.0.0"
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
-        exclude: "_templates"
+        exclude: ".git"
+  - repo: https://github.com/thibaudcolas/curlylint
+    rev: v0.13.1
+    hooks:
+      - id: curlylint
+        args: ["--format", "stylish"]
   - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.9.0
+    rev: v0.10.0
     hooks:
       - id: shellcheck
   - repo: https://github.com/lovesegfault/beautysh.git
@@ -62,18 +63,18 @@ repos:
     hooks:
       - id: beautysh
   - repo: https://github.com/python-formate/flake8-dunder-all
-    rev: v0.3.0
+    rev: v0.4.1
     hooks:
       - id: ensure-dunder-all
         exclude: "test*|examples*|tools"
         args: ["--use-tuple"]
   - repo: https://github.com/ariebovenberg/slotscheck
-    rev: v0.16.5
+    rev: v0.19.0
     hooks:
       - id: slotscheck
         exclude: "test_*|docs"
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.4.1"
+    rev: "v1.10.0"
     hooks:
       - id: mypy
         exclude: "tools|docs"
@@ -91,7 +92,7 @@ repos:
             structlog,
             pytest,
             pytest-docker,
-            litestar,
+            "litestar[prometheus,standard,structlog]",
             types-click,
             types-passlib,
             types-click,

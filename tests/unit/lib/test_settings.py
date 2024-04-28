@@ -1,4 +1,5 @@
 """Test app/lib/settings.py."""
+
 import os
 from pathlib import Path
 
@@ -43,7 +44,8 @@ def test_server_settings() -> None:
 # def test_app_settings() -> None:
 #     """Test application settings."""
 #
-#     # TODO: assert app_settings.BUILD_NUMBER == "test_build", f'Expected "test_build", but got "{app_settings.BUILD_NUMBER}"'
+#     # TODO: ...
+#      assert app_settings.BUILD_NUMBER == "test_build", f'Expected "test_build", but got "{app_settings.BUILD_NUMBER}"'
 #     assert app_settings.SECRET_KEY is not None
 
 
