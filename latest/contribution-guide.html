@@ -1,0 +1,363 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contribution guide - Docs</title>
+    <link rel="shortcut icon" href="_static/badge.svg"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=f2d5353f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=73314dcc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Contribution guide"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="document"><div class="announcement">
+    <div class="announcement-inner">
+      <p>This documentation is currently under development.</p>
+      <button class="announcement-close" aria-label="Close announcement">
+        <i class="i-lucide close"></i>
+      </button>
+    </div>
+  </div><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="/">
+      <img class="light-logo" src="_static/badge.svg" alt="niapi" height="28" />
+      <img class="dark-logo" src="_static/badge.svg" alt="niapi" height="28" />
+      <strong>niapi</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://niapi.app/">
+            <span>Dashboard</span>
+            
+          </a>
+        </li><li class="link">
+          <a href="https://github.com/sponsors/JacobCoffee">
+            <span>Sponsor me</span>
+            
+          </a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+        
+<form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-socials flex items-center">
+    <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub">
+      <i class="i-simpleicons github"></i>
+    </a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)">
+    <i class="i-simpleicons x-twitter"></i>
+  </a>
+    <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord">
+      <i class="i-simpleicons discord"></i>
+    </a>
+</div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-lucide theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage/index.html">Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/asgi.html">asgi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cli.html">cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/metadata.html">metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/domain/init.html">Domain Initializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/domain/urls.html">urls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/domain/web/index.html">web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/domain/web/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/domain/system/index.html">system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/domain/system/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/domain/calculator/index.html">calculator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/domain/calculator/controllers.html">controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/domain/calculator/helpers.html">helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/domain/calculator/schema.html">schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/cors.html">cors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/openapi.html">openapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/schema.html">schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/serialization.html">serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/settings.html">settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/static_files.html">static files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/template.html">template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/lib/log/index.html">logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/lib/log/controller.html">controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/lib/log/init.html">init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/lib/log/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4">
+  <div class="localtoc">
+    <h3>On this page</h3>
+    <ul>
+<li><a class="reference internal" href="#setting-up-the-environment">Setting up the environment</a></li>
+<li><a class="reference internal" href="#code-contributions">Code contributions</a><ul>
+<li><a class="reference internal" href="#workflow">Workflow</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#guidelines-for-writing-code">Guidelines for writing code</a><ul>
+<li><a class="reference internal" href="#writing-and-running-tests">Writing and running tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project-documentation">Project documentation</a><ul>
+<li><a class="reference internal" href="#running-the-docs-locally">Running the docs locally</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creating-a-new-release">Creating a new release</a></li>
+</ul>
+
+  </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/JacobCoffee/niapi"
+  data-type="github" data-user="JacobCoffee" data-repo="niapi">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <i class="i-simpleicons github"></i>
+  </span>
+  <span class="flex-grow px-2">
+    <span>JacobCoffee/niapi</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <i class="i-lucide star"></i>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <i class="i-lucide git-fork"></i>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/JacobCoffee/niapi/blob/master/docs/contribution-guide.rst">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">niapi</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Contribution guide</strong>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <section id="contribution-guide">
+<h1>Contribution guide<a class="headerlink" href="#contribution-guide" title="Link to this heading">¶</a></h1>
+<section id="setting-up-the-environment">
+<h2>Setting up the environment<a class="headerlink" href="#setting-up-the-environment" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Install <a class="reference external" href="https://pdm.fming.dev/latest/">Python Driving Assistant</a></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">install</span></code> to create a <a class="reference external" href="https://docs.python.org/3/tutorial/venv.html">virtual environment</a> and install
+the dependencies</p></li>
+<li><dl class="simple">
+<dt>If you’re working on the documentation and need to build it locally, install the extra dependencies with</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">install</span> <span class="pre">-G</span> <span class="pre">docs</span></code></p>
+</dd>
+</dl>
+</li>
+<li><p>Install <a class="reference external" href="https://pre-commit.com/">pre-commit</a></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">install</span></code> to install pre-commit hooks</p></li>
+</ol>
+</section>
+<section id="code-contributions">
+<h2>Code contributions<a class="headerlink" href="#code-contributions" title="Link to this heading">¶</a></h2>
+<section id="workflow">
+<h3>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/JacobCoffee/niapi/fork">Fork</a> the <a class="reference external" href="https://github.com/JacobCoffee/niapi">NIAPI repository</a></p></li>
+<li><p>Clone your fork locally with git</p></li>
+<li><p><a class="reference external" href="#setting-up-the-environment">Set up the environment</a></p></li>
+<li><p>Make your changes</p></li>
+<li><p>(Optional) Run <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">run</span> <span class="pre">--all-files</span></code> to run linters and formatters. This step is optional and will be executed
+automatically by git before you make a commit, but you may want to run it manually in order to apply fixes</p></li>
+<li><p>Commit your changes to git</p></li>
+<li><p>Push the changes to your fork</p></li>
+<li><p>Open a <a class="reference external" href="https://docs.github.com/en/pull-requests">pull request</a>. Give the pull request a descriptive title
+indicating what it changes. If it has a corresponding open issue, the issue number should be included in the title as
+well. For example a pull request that fixes issue <code class="docutils literal notranslate"><span class="pre">Bug:</span> <span class="pre">Increased</span> <span class="pre">stack</span> <span class="pre">size</span> <span class="pre">making</span> <span class="pre">it</span> <span class="pre">impossible</span> <span class="pre">to</span> <span class="pre">find</span> <span class="pre">needle</span> <span class="pre">#100</span></code>
+could be titled <code class="docutils literal notranslate"><span class="pre">Fix</span> <span class="pre">#100</span> <span class="pre">-</span> <span class="pre">Make</span> <span class="pre">needles</span> <span class="pre">easier</span> <span class="pre">to</span> <span class="pre">find</span> <span class="pre">by</span> <span class="pre">applying</span> <span class="pre">fire</span> <span class="pre">to</span> <span class="pre">haystack</span></code></p></li>
+</ol>
+</section>
+</section>
+<section id="guidelines-for-writing-code">
+<h2>Guidelines for writing code<a class="headerlink" href="#guidelines-for-writing-code" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>All code should be fully <a class="reference external" href="https://peps.python.org/pep-0484/">typed</a>. This is enforced via
+<a class="reference external" href="https://mypy.readthedocs.io/en/stable/">mypy</a>.</p></li>
+<li><p>All code should be tested. This is enforced via <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>All code should be properly formatted. This is enforced via <a class="reference external" href="https://black.readthedocs.io/en/stable/">black</a> and <a class="reference external" href="https://beta.ruff.rs/docs/">Ruff</a>.</p></li>
+</ul>
+<section id="writing-and-running-tests">
+<h3>Writing and running tests<a class="headerlink" href="#writing-and-running-tests" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="project-documentation">
+<h2>Project documentation<a class="headerlink" href="#project-documentation" title="Link to this heading">¶</a></h2>
+<p>The documentation is located in the <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory and is <a class="reference external" href="https://docutils.sourceforge.io/rst.html">ReST</a> and
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a>. If you’re unfamiliar with any of those,
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/lib/usage/restructuredtext/basics.html">ReStructuredText primer</a> and
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/lib/usage/quickstart.html">Sphinx quickstart</a> are recommended reads.</p>
+<section id="running-the-docs-locally">
+<h3>Running the docs locally<a class="headerlink" href="#running-the-docs-locally" title="Link to this heading">¶</a></h3>
+<p>To run or build the docs locally, you need to first install the required dependencies:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">install</span> <span class="pre">-G</span> <span class="pre">docs</span></code></p>
+<p>Then you can serve the documentation with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs-serve</span></code>, or build them with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code>.</p>
+</section>
+</section>
+<section id="creating-a-new-release">
+<h2>Creating a new release<a class="headerlink" href="#creating-a-new-release" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Increment the version in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. The version should follow
+<a class="reference external" href="https://semver.org/">semantic versioning</a> and <a class="reference external" href="https://www.python.org/dev/peps/pep-0440/">PEP 440</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/JacobCoffee/niapi/releases/new">Draft a new release</a> on GitHub</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">vMAJOR.MINOR.PATCH</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">v1.2.3</span></code>) as both the tag and release title</p></li>
+<li><p>Fill in the release description. You can use the “Generate release notes” function to get a draft for this</p></li>
+</ul>
+</li>
+<li><p>Commit your changes and push to <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p>Publish the release</p></li>
+<li><p>Check that the “publish” <a class="reference external" href="https://github.com/JacobCoffee/niapi/actions">action</a> has run successfully</p></li>
+</ol>
+</section>
+</section>
+
+        </article>
+        <button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button>
+        
+        <div class="navigation flex print:hidden">
+  
+  
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, Jacob Coffee</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub"><i class="i-simpleicons github"></i></a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)"><i class="i-simpleicons x-twitter"></i></a>
+  <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord"><i class="i-simpleicons discord"></i></a>
+  <a href="https://youtube.com/@monorepo" aria-label="YouTube"><i class="i-simpleicons youtube"></i></a>
+</div>
+    </div>
+  </div>
+</footer></div>
+      <script src="_static/documentation_options.js?v=1e5e4989"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/shibuya.js?v=5f0e4c24"></script>
+    
+</body>
+</html>

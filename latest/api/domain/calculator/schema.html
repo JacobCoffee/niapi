@@ -1,0 +1,379 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="../../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>schema - Docs</title>
+    <link rel="shortcut icon" href="../../../_static/badge.svg"/><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="cors" href="../../lib/cors.html" /><link rel="prev" title="helpers" href="helpers.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/shibuya.css?v=f2d5353f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../../_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=73314dcc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="schema"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="document"><div class="announcement">
+    <div class="announcement-inner">
+      <p>This documentation is currently under development.</p>
+      <button class="announcement-close" aria-label="Close announcement">
+        <i class="i-lucide close"></i>
+      </button>
+    </div>
+  </div><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="/">
+      <img class="light-logo" src="../../../_static/badge.svg" alt="niapi" height="28" />
+      <img class="dark-logo" src="../../../_static/badge.svg" alt="niapi" height="28" />
+      <strong>niapi</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://niapi.app/">
+            <span>Dashboard</span>
+            
+          </a>
+        </li><li class="link">
+          <a href="https://github.com/sponsors/JacobCoffee">
+            <span>Sponsor me</span>
+            
+          </a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+        
+<form class="searchbox flex items-center" action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-socials flex items-center">
+    <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub">
+      <i class="i-simpleicons github"></i>
+    </a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)">
+    <i class="i-simpleicons x-twitter"></i>
+  </a>
+    <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord">
+      <i class="i-simpleicons discord"></i>
+    </a>
+</div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-lucide theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/index.html">Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../asgi.html">asgi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli.html">cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metadata.html">metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../init.html">Domain Initializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../urls.html">urls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../web/index.html">web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../web/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../system/index.html">system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../system/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">calculator</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="controllers.html">controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">helpers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/cors.html">cors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/openapi.html">openapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/schema.html">schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/serialization.html">serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/settings.html">settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/static_files.html">static files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/template.html">template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lib/log/index.html">logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lib/log/controller.html">controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lib/log/init.html">init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lib/log/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4">
+  <div class="localtoc">
+    <h3>On this page</h3>
+    <ul>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkData"><code class="docutils literal notranslate"><span class="pre">NetworkData</span></code></a><ul>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">NetworkData.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkData.model_config"><code class="docutils literal notranslate"><span class="pre">NetworkData.model_config</span></code></a></li>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkData.model_fields"><code class="docutils literal notranslate"><span class="pre">NetworkData.model_fields</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkInfo"><code class="docutils literal notranslate"><span class="pre">NetworkInfo</span></code></a><ul>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkInfo.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">NetworkInfo.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkInfo.model_config"><code class="docutils literal notranslate"><span class="pre">NetworkInfo.model_config</span></code></a></li>
+<li><a class="reference internal" href="#app.domain.calculator.schema.NetworkInfo.model_fields"><code class="docutils literal notranslate"><span class="pre">NetworkInfo.model_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/JacobCoffee/niapi"
+  data-type="github" data-user="JacobCoffee" data-repo="niapi">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <i class="i-simpleicons github"></i>
+  </span>
+  <span class="flex-grow px-2">
+    <span>JacobCoffee/niapi</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <i class="i-lucide star"></i>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <i class="i-lucide git-fork"></i>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/JacobCoffee/niapi/blob/master/docs/api/domain/calculator/schema.rst">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../../index.html"><span itemprop="name">niapi</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">API Reference</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">calculator</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="3" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">schema</strong>
+        <meta itemprop="position" content="4" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <section id="schema">
+<h1>schema<a class="headerlink" href="#schema" title="Link to this heading">¶</a></h1>
+<p>Schema for the application calculator.</p>
+<p id="module-app.domain.calculator.schema">NIAPI calculator schema.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.domain.calculator.schema.</span></span><span class="sig-name descname"><span class="pre">NetworkData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/app/domain/calculator/schema.html#NetworkData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.domain.calculator.schema.NetworkData" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Network Data Schema.</p>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#app.domain.calculator.schema.NetworkData.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#app.domain.calculator.schema.NetworkData.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ip':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">IP</span> <span class="pre">address</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')]),</span> <span class="pre">'prefix':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">Subnet</span> <span class="pre">Prefix.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(3[012]|[12]?\\d)$')])}</span></em><a class="headerlink" href="#app.domain.calculator.schema.NetworkData.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.domain.calculator.schema.</span></span><span class="sig-name descname"><span class="pre">NetworkInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subnet_mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">wildcard_subnet_mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_ips</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">usable_ips</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">broadcast_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/app/domain/calculator/schema.html#NetworkInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.domain.calculator.schema.NetworkInfo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Network Info Schema.</p>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkInfo.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#app.domain.calculator.schema.NetworkInfo.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkInfo.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#app.domain.calculator.schema.NetworkInfo.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.domain.calculator.schema.NetworkInfo.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'broadcast_ip':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Broadcast</span> <span class="pre">IP',</span> <span class="pre">description='The</span> <span class="pre">broadcast</span> <span class="pre">IP</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$')]),</span> <span class="pre">'first_ip':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='First</span> <span class="pre">IP',</span> <span class="pre">description='The</span> <span class="pre">first</span> <span class="pre">IP</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$')]),</span> <span class="pre">'last_ip':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Last</span> <span class="pre">IP',</span> <span class="pre">description='The</span> <span class="pre">last</span> <span class="pre">IP</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$')]),</span> <span class="pre">'network_ip':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Network</span> <span class="pre">IP',</span> <span class="pre">description='The</span> <span class="pre">network</span> <span class="pre">IP</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$')]),</span> <span class="pre">'subnet_mask':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Subnet</span> <span class="pre">Mask',</span> <span class="pre">description='The</span> <span class="pre">subnet</span> <span class="pre">mask</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')]),</span> <span class="pre">'total_ips':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Total</span> <span class="pre">IPs',</span> <span class="pre">description='The</span> <span class="pre">total</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">IPs</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">network.'),</span> <span class="pre">'usable_ips':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Usable</span> <span class="pre">IPs',</span> <span class="pre">description='The</span> <span class="pre">total</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">usable</span> <span class="pre">IPs</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">network.'),</span> <span class="pre">'wildcard_subnet_mask':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias_priority=2,</span> <span class="pre">serialization_alias='Wildcard</span> <span class="pre">Subnet</span> <span class="pre">Mask',</span> <span class="pre">description='The</span> <span class="pre">wildcard</span> <span class="pre">subnet</span> <span class="pre">mask</span> <span class="pre">in</span> <span class="pre">standard</span> <span class="pre">IPv4</span> <span class="pre">format.',</span> <span class="pre">metadata=[_PydanticGeneralMetadata(pattern='^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')])}</span></em><a class="headerlink" href="#app.domain.calculator.schema.NetworkInfo.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+        <button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button>
+        
+        <div class="navigation flex print:hidden">
+  <div class="navigation-prev">
+    <a href="helpers.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span>
+        
+        <div class="title">helpers</div>
+        
+      </div>
+    </a>
+  </div>
+  <div class="navigation-next">
+    <a href="../../lib/cors.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">cors</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div>
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, Jacob Coffee</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub"><i class="i-simpleicons github"></i></a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)"><i class="i-simpleicons x-twitter"></i></a>
+  <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord"><i class="i-simpleicons discord"></i></a>
+  <a href="https://youtube.com/@monorepo" aria-label="YouTube"><i class="i-simpleicons youtube"></i></a>
+</div>
+    </div>
+  </div>
+</footer></div>
+      <script src="../../../_static/documentation_options.js?v=1e5e4989"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/shibuya.js?v=5f0e4c24"></script>
+    
+</body>
+</html>

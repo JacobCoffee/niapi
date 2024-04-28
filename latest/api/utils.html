@@ -1,0 +1,414 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>utils - Docs</title>
+    <link rel="shortcut icon" href="../_static/badge.svg"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Domain Initializer" href="domain/init.html" /><link rel="prev" title="metadata" href="metadata.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="../_static/shibuya.css?v=f2d5353f" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link media="print" rel="stylesheet" type="text/css" href="../_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=73314dcc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="utils"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="document"><div class="announcement">
+    <div class="announcement-inner">
+      <p>This documentation is currently under development.</p>
+      <button class="announcement-close" aria-label="Close announcement">
+        <i class="i-lucide close"></i>
+      </button>
+    </div>
+  </div><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="/">
+      <img class="light-logo" src="../_static/badge.svg" alt="niapi" height="28" />
+      <img class="dark-logo" src="../_static/badge.svg" alt="niapi" height="28" />
+      <strong>niapi</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://niapi.app/">
+            <span>Dashboard</span>
+            
+          </a>
+        </li><li class="link">
+          <a href="https://github.com/sponsors/JacobCoffee">
+            <span>Sponsor me</span>
+            
+          </a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+        
+<form class="searchbox flex items-center" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-socials flex items-center">
+    <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub">
+      <i class="i-simpleicons github"></i>
+    </a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)">
+    <i class="i-simpleicons x-twitter"></i>
+  </a>
+    <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord">
+      <i class="i-simpleicons discord"></i>
+    </a>
+</div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-lucide theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="asgi.html">asgi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">metadata</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domain/init.html">Domain Initializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domain/urls.html">urls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domain/web/index.html">web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="domain/web/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="domain/system/index.html">system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="domain/system/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="domain/calculator/index.html">calculator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="domain/calculator/controllers.html">controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="domain/calculator/helpers.html">helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="domain/calculator/schema.html">schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lib/cors.html">cors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/openapi.html">openapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/schema.html">schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/serialization.html">serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/settings.html">settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/static_files.html">static files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/template.html">template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib/log/index.html">logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lib/log/controller.html">controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lib/log/init.html">init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lib/log/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4">
+  <div class="localtoc">
+    <h3>On this page</h3>
+    <ul>
+<li><a class="reference internal" href="#app.utils.camel_case"><code class="docutils literal notranslate"><span class="pre">camel_case()</span></code></a></li>
+<li><a class="reference internal" href="#app.utils.case_insensitive_string_compare"><code class="docutils literal notranslate"><span class="pre">case_insensitive_string_compare()</span></code></a></li>
+<li><a class="reference internal" href="#app.utils.check_email"><code class="docutils literal notranslate"><span class="pre">check_email()</span></code></a></li>
+<li><a class="reference internal" href="#app.utils.dataclass_as_dict_shallow"><code class="docutils literal notranslate"><span class="pre">dataclass_as_dict_shallow()</span></code></a></li>
+<li><a class="reference internal" href="#app.utils.import_string"><code class="docutils literal notranslate"><span class="pre">import_string()</span></code></a></li>
+<li><a class="reference internal" href="#app.utils.module_to_os_path"><code class="docutils literal notranslate"><span class="pre">module_to_os_path()</span></code></a></li>
+<li><a class="reference internal" href="#app.utils.slugify"><code class="docutils literal notranslate"><span class="pre">slugify()</span></code></a></li>
+</ul>
+
+  </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/JacobCoffee/niapi"
+  data-type="github" data-user="JacobCoffee" data-repo="niapi">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <i class="i-simpleicons github"></i>
+  </span>
+  <span class="flex-grow px-2">
+    <span>JacobCoffee/niapi</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <i class="i-lucide star"></i>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <i class="i-lucide git-fork"></i>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/JacobCoffee/niapi/blob/master/docs/api/utils.rst">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">niapi</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">API Reference</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">utils</strong>
+        <meta itemprop="position" content="3" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <section id="utils">
+<h1>utils<a class="headerlink" href="#utils" title="Link to this heading">¶</a></h1>
+<p>Utilities for the application.</p>
+<p id="module-app.utils">General utility functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.camel_case">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">camel_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/app/utils.html#camel_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.camel_case" title="Link to this definition">¶</a></dt>
+<dd><p>Convert a string to camel case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> – The string to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The camel cased string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.case_insensitive_string_compare">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">case_insensitive_string_compare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="reference internal" href="../_modules/app/utils.html#case_insensitive_string_compare"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.case_insensitive_string_compare" title="Link to this definition">¶</a></dt>
+<dd><p>Compare two strings case insensitively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – The first string.</p></li>
+<li><p><strong>b</strong> – The second string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the strings are equal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.check_email">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">check_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/app/utils.html#check_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.check_email" title="Link to this definition">¶</a></dt>
+<dd><p>Check if the email is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>email</strong> – The email to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The email if it is valid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.dataclass_as_dict_shallow">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">dataclass_as_dict_shallow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataclass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_none</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/app/utils.html#dataclass_as_dict_shallow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.dataclass_as_dict_shallow" title="Link to this definition">¶</a></dt>
+<dd><p>Convert a dataclass to a dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataclass</strong> – The dataclass to convert.</p></li>
+<li><p><strong>exclude_none</strong> – Whether to exclude None values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The dataclass as a dict.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.import_string">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">import_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dotted_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></span><a class="reference internal" href="../_modules/app/utils.html#import_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.import_string" title="Link to this definition">¶</a></dt>
+<dd><p>Import a class/function from a dotted path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dotted_path</strong> – The dotted path to the class/function.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The imported class/function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.module_to_os_path">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">module_to_os_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dotted_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'app'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.12)"><span class="pre">Path</span></a></span></span><a class="reference internal" href="../_modules/app/utils.html#module_to_os_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.module_to_os_path" title="Link to this definition">¶</a></dt>
+<dd><p>Get the path to a module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dotted_path</strong> – The dotted path to the module.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The path to the module.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.utils.slugify">
+<span class="sig-prename descclassname"><span class="pre">app.utils.</span></span><span class="sig-name descname"><span class="pre">slugify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_unicode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/app/utils.html#slugify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.utils.slugify" title="Link to this definition">¶</a></dt>
+<dd><p>Convert a string to a slug.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The string to slugify.</p></li>
+<li><p><strong>allow_unicode</strong> – Whether to allow unicode characters.</p></li>
+<li><p><strong>separator</strong> – The separator to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The slugified string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+        </article>
+        <button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button>
+        
+        <div class="navigation flex print:hidden">
+  <div class="navigation-prev">
+    <a href="metadata.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span>
+        
+        <div class="title">metadata</div>
+        
+      </div>
+    </a>
+  </div>
+  <div class="navigation-next">
+    <a href="domain/init.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Domain Initializer</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div>
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, Jacob Coffee</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub"><i class="i-simpleicons github"></i></a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)"><i class="i-simpleicons x-twitter"></i></a>
+  <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord"><i class="i-simpleicons discord"></i></a>
+  <a href="https://youtube.com/@monorepo" aria-label="YouTube"><i class="i-simpleicons youtube"></i></a>
+</div>
+    </div>
+  </div>
+</footer></div>
+      <script src="../_static/documentation_options.js?v=1e5e4989"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/shibuya.js?v=5f0e4c24"></script>
+    
+</body>
+</html>

@@ -1,0 +1,446 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="../../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>app.lib.serialization - Docs</title>
+    <link rel="shortcut icon" href="../../../_static/badge.svg"/><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/shibuya.css?v=f2d5353f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../../_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=73314dcc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="app.lib.serialization"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="document"><div class="announcement">
+    <div class="announcement-inner">
+      <p>This documentation is currently under development.</p>
+      <button class="announcement-close" aria-label="Close announcement">
+        <i class="i-lucide close"></i>
+      </button>
+    </div>
+  </div><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="/">
+      <img class="light-logo" src="../../../_static/badge.svg" alt="niapi" height="28" />
+      <img class="dark-logo" src="../../../_static/badge.svg" alt="niapi" height="28" />
+      <strong>niapi</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://niapi.app/">
+            <span>Dashboard</span>
+            
+          </a>
+        </li><li class="link">
+          <a href="https://github.com/sponsors/JacobCoffee">
+            <span>Sponsor me</span>
+            
+          </a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+        
+<form class="searchbox flex items-center" action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-socials flex items-center">
+    <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub">
+      <i class="i-simpleicons github"></i>
+    </a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)">
+    <i class="i-simpleicons x-twitter"></i>
+  </a>
+    <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord">
+      <i class="i-simpleicons discord"></i>
+    </a>
+</div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-lucide theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/index.html">Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/asgi.html">asgi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cli.html">cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/metadata.html">metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/init.html">Domain Initializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/urls.html">urls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/web/index.html">web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/web/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/system/index.html">system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/system/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/calculator/index.html">calculator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/calculator/controllers.html">controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/calculator/helpers.html">helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/calculator/schema.html">schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/cors.html">cors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/openapi.html">openapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/schema.html">schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/serialization.html">serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/settings.html">settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/static_files.html">static files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/template.html">template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/log/index.html">logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/lib/log/controller.html">controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/lib/log/init.html">init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/lib/log/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/JacobCoffee/niapi"
+  data-type="github" data-user="JacobCoffee" data-repo="niapi">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <i class="i-simpleicons github"></i>
+  </span>
+  <span class="flex-grow px-2">
+    <span>JacobCoffee/niapi</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <i class="i-lucide star"></i>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <i class="i-lucide git-fork"></i>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../../index.html"><span itemprop="name">niapi</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">Module code</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">app.lib.serialization</strong>
+        <meta itemprop="position" content="3" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <h1>Source code for app.lib.serialization</h1><div class="highlight"><pre>
+<span></span><span data-line="1"><span class="sd">&quot;&quot;&quot;NIAPI Serialization Helpers.&quot;&quot;&quot;</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+</span><span data-line="4">
+</span><span data-line="5"><span class="kn">import</span> <span class="nn">datetime</span>
+</span><span data-line="6"><span class="kn">from</span> <span class="nn">json</span> <span class="kn">import</span> <span class="n">JSONEncoder</span>
+</span><span data-line="7"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+</span><span data-line="8"><span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">UUID</span>
+</span><span data-line="9">
+</span><span data-line="10"><span class="kn">import</span> <span class="nn">msgspec</span>
+</span><span data-line="11"><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+</span><span data-line="12">
+</span><span data-line="13"><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+</span><span data-line="14">    <span class="s2">&quot;convert_datetime_to_gmt&quot;</span><span class="p">,</span>
+</span><span data-line="15">    <span class="s2">&quot;convert_string_to_camel_case&quot;</span><span class="p">,</span>
+</span><span data-line="16">    <span class="s2">&quot;convert_camel_to_snake_case&quot;</span><span class="p">,</span>
+</span><span data-line="17">    <span class="s2">&quot;from_json&quot;</span><span class="p">,</span>
+</span><span data-line="18">    <span class="s2">&quot;from_msgpack&quot;</span><span class="p">,</span>
+</span><span data-line="19">    <span class="s2">&quot;to_json&quot;</span><span class="p">,</span>
+</span><span data-line="20">    <span class="s2">&quot;to_msgpack&quot;</span><span class="p">,</span>
+</span><span data-line="21">    <span class="s2">&quot;UUIDEncoder&quot;</span><span class="p">,</span>
+</span><span data-line="22"><span class="p">]</span>
+</span><span data-line="23">
+</span><span data-line="24">
+</span><span data-line="25"><span class="k">def</span> <span class="nf">_default</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span data-line="26"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Default encoder for msgspec.</span>
+</span><span data-line="27">
+</span><span data-line="28"><span class="sd">    Args:</span>
+</span><span data-line="29"><span class="sd">        value: The value to encode</span>
+</span><span data-line="30">
+</span><span data-line="31"><span class="sd">    Returns:</span>
+</span><span data-line="32"><span class="sd">        str: The encoded value</span>
+</span><span data-line="33"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="34">    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">BaseModel</span><span class="p">):</span>
+</span><span data-line="35">        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">model_dump_json</span><span class="p">(</span><span class="n">by_alias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span data-line="36">    <span class="k">try</span><span class="p">:</span>
+</span><span data-line="37">        <span class="n">val</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</span><span data-line="38">    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+</span><span data-line="39">        <span class="k">raise</span> <span class="ne">TypeError</span> <span class="kn">from</span> <span class="nn">exc</span>
+</span><span data-line="40">    <span class="k">else</span><span class="p">:</span>
+</span><span data-line="41">        <span class="k">return</span> <span class="n">val</span>
+</span><span data-line="42">
+</span><span data-line="43">
+</span><span data-line="44"><span class="n">_msgspec_json_encoder</span> <span class="o">=</span> <span class="n">msgspec</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">Encoder</span><span class="p">(</span><span class="n">enc_hook</span><span class="o">=</span><span class="n">_default</span><span class="p">)</span>
+</span><span data-line="45"><span class="n">_msgspec_json_decoder</span> <span class="o">=</span> <span class="n">msgspec</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">Decoder</span><span class="p">()</span>
+</span><span data-line="46"><span class="n">_msgspec_msgpack_encoder</span> <span class="o">=</span> <span class="n">msgspec</span><span class="o">.</span><span class="n">msgpack</span><span class="o">.</span><span class="n">Encoder</span><span class="p">(</span><span class="n">enc_hook</span><span class="o">=</span><span class="n">_default</span><span class="p">)</span>
+</span><span data-line="47"><span class="n">_msgspec_msgpack_decoder</span> <span class="o">=</span> <span class="n">msgspec</span><span class="o">.</span><span class="n">msgpack</span><span class="o">.</span><span class="n">Decoder</span><span class="p">()</span>
+</span><span data-line="48">
+</span><span data-line="49">
+<div class="viewcode-block" id="to_json">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.to_json">[docs]</a>
+</span><span data-line="50"><span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+</span><span data-line="51"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode json with the optimized :doc:`msgspec &lt;msgspec:index&gt;` package.</span>
+</span><span data-line="52">
+</span><span data-line="53"><span class="sd">    Args:</span>
+</span><span data-line="54"><span class="sd">        value: The value to encode</span>
+</span><span data-line="55">
+</span><span data-line="56"><span class="sd">    Returns:</span>
+</span><span data-line="57"><span class="sd">        bytes: The encoded value</span>
+</span><span data-line="58"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="59">    <span class="k">return</span> <span class="n">_msgspec_json_encoder</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+</span><span data-line="60">
+</span><span data-line="61">
+<div class="viewcode-block" id="from_json">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.from_json">[docs]</a>
+</span><span data-line="62"><span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+</span><span data-line="63"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Decode to an object with the optimized :doc:`msgspec &lt;msgspec:index&gt;` package.</span>
+</span><span data-line="64">
+</span><span data-line="65"><span class="sd">    Args:</span>
+</span><span data-line="66"><span class="sd">        value: The value to decode</span>
+</span><span data-line="67">
+</span><span data-line="68"><span class="sd">    Returns:</span>
+</span><span data-line="69"><span class="sd">        Any: The decoded value</span>
+</span><span data-line="70"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="71">    <span class="k">return</span> <span class="n">_msgspec_json_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+</span><span data-line="72">
+</span><span data-line="73">
+<div class="viewcode-block" id="to_msgpack">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.to_msgpack">[docs]</a>
+</span><span data-line="74"><span class="k">def</span> <span class="nf">to_msgpack</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+</span><span data-line="75"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode json with the optimized :doc:`msgspec &lt;msgspec:index&gt;` package.</span>
+</span><span data-line="76">
+</span><span data-line="77"><span class="sd">    Args:</span>
+</span><span data-line="78"><span class="sd">        value: The value to encode</span>
+</span><span data-line="79">
+</span><span data-line="80"><span class="sd">    Returns:</span>
+</span><span data-line="81"><span class="sd">        bytes: The encoded value</span>
+</span><span data-line="82"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="83">    <span class="k">return</span> <span class="n">_msgspec_msgpack_encoder</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+</span><span data-line="84">
+</span><span data-line="85">
+<div class="viewcode-block" id="from_msgpack">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.from_msgpack">[docs]</a>
+</span><span data-line="86"><span class="k">def</span> <span class="nf">from_msgpack</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+</span><span data-line="87"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Decode to an object with the optimized :doc:`msgspec &lt;msgspec:index&gt;` package.</span>
+</span><span data-line="88">
+</span><span data-line="89"><span class="sd">    Args:</span>
+</span><span data-line="90"><span class="sd">        value: The value to decode</span>
+</span><span data-line="91">
+</span><span data-line="92"><span class="sd">    Returns:</span>
+</span><span data-line="93"><span class="sd">        Any: The decoded value</span>
+</span><span data-line="94"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="95">    <span class="k">return</span> <span class="n">_msgspec_msgpack_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+</span><span data-line="96">
+</span><span data-line="97">
+<div class="viewcode-block" id="convert_datetime_to_gmt">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.convert_datetime_to_gmt">[docs]</a>
+</span><span data-line="98"><span class="k">def</span> <span class="nf">convert_datetime_to_gmt</span><span class="p">(</span><span class="n">dt</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span data-line="99"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Handle datetime serialization for nested timestamps.</span>
+</span><span data-line="100">
+</span><span data-line="101"><span class="sd">    Args:</span>
+</span><span data-line="102"><span class="sd">        dt: The datetime to convert</span>
+</span><span data-line="103">
+</span><span data-line="104"><span class="sd">    Returns:</span>
+</span><span data-line="105"><span class="sd">        str: The datetime converted to GMT</span>
+</span><span data-line="106"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="107">    <span class="k">if</span> <span class="ow">not</span> <span class="n">dt</span><span class="o">.</span><span class="n">tzinfo</span><span class="p">:</span>
+</span><span data-line="108">        <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
+</span><span data-line="109">    <span class="k">return</span> <span class="n">dt</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;+00:00&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span></div>
+
+</span><span data-line="110">
+</span><span data-line="111">
+<div class="viewcode-block" id="convert_string_to_camel_case">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.convert_string_to_camel_case">[docs]</a>
+</span><span data-line="112"><span class="k">def</span> <span class="nf">convert_string_to_camel_case</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span data-line="113"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a string to camel case.</span>
+</span><span data-line="114">
+</span><span data-line="115"><span class="sd">    Args:</span>
+</span><span data-line="116"><span class="sd">        string: The string to convert</span>
+</span><span data-line="117">
+</span><span data-line="118"><span class="sd">    Returns:</span>
+</span><span data-line="119"><span class="sd">        str: The string converted to camel case</span>
+</span><span data-line="120"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="121">    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word</span> <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)))</span></div>
+
+</span><span data-line="122">
+</span><span data-line="123">
+<div class="viewcode-block" id="convert_camel_to_snake_case">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.convert_camel_to_snake_case">[docs]</a>
+</span><span data-line="124"><span class="k">def</span> <span class="nf">convert_camel_to_snake_case</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span data-line="125"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a string to snake case.</span>
+</span><span data-line="126">
+</span><span data-line="127"><span class="sd">    Args:</span>
+</span><span data-line="128"><span class="sd">        string: The string to convert</span>
+</span><span data-line="129">
+</span><span data-line="130"><span class="sd">    Returns:</span>
+</span><span data-line="131"><span class="sd">        str: The string converted to snake case</span>
+</span><span data-line="132"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span data-line="133">    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">char</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">char</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="k">else</span> <span class="n">char</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">string</span><span class="p">))</span></div>
+
+</span><span data-line="134">
+</span><span data-line="135">
+<div class="viewcode-block" id="UUIDEncoder">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.UUIDEncoder">[docs]</a>
+</span><span data-line="136"><span class="k">class</span> <span class="nc">UUIDEncoder</span><span class="p">(</span><span class="n">JSONEncoder</span><span class="p">):</span>
+</span><span data-line="137"><span class="w">    </span><span class="sd">&quot;&quot;&quot;JSON Encoder for UUIDs.&quot;&quot;&quot;</span>
+</span><span data-line="138">
+<div class="viewcode-block" id="UUIDEncoder.default">
+<a class="viewcode-back" href="../../../api/lib/serialization.html#app.lib.serialization.UUIDEncoder.default">[docs]</a>
+</span><span data-line="139">    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+</span><span data-line="140"><span class="w">        </span><span class="sd">&quot;&quot;&quot;Handle UUIDs.</span>
+</span><span data-line="141">
+</span><span data-line="142"><span class="sd">        Args:</span>
+</span><span data-line="143"><span class="sd">            obj: The object to encode</span>
+</span><span data-line="144">
+</span><span data-line="145"><span class="sd">        Returns:</span>
+</span><span data-line="146"><span class="sd">            str: The encoded object</span>
+</span><span data-line="147"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span data-line="148">        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">UUID</span><span class="p">)</span> <span class="k">else</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
+</div>
+
+</span></pre></div>
+        </article>
+        <button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button>
+        
+        <div class="navigation flex print:hidden">
+  
+  
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, Jacob Coffee</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub"><i class="i-simpleicons github"></i></a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)"><i class="i-simpleicons x-twitter"></i></a>
+  <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord"><i class="i-simpleicons discord"></i></a>
+  <a href="https://youtube.com/@monorepo" aria-label="YouTube"><i class="i-simpleicons youtube"></i></a>
+</div>
+    </div>
+  </div>
+</footer></div>
+      <script src="../../../_static/documentation_options.js?v=1e5e4989"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/shibuya.js?v=5f0e4c24"></script>
+      <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+      <script>mermaid.initialize({startOnLoad:true});</script>
+    
+</body>
+</html>

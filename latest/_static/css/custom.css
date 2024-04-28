@@ -1,0 +1,30 @@
+:root {
+  --brand-main: #85c7f2;
+  --brand-secondary: #636363;
+  --brand-tertiary: #383838;
+  --brand-alert: #f15152;
+}
+
+html.dark,
+html.light {
+}
+
+html.light {
+  --syntax-light-constant: #009bff;
+  --syntax-light-text: #09090a;
+  --syntax-light-cap-bg: #325b76;
+  --syntax-light-pre-bg: #ddefff;
+  --syntax-light-keyword: #009bff;
+  --syntax-light-property: #85c7f2;
+}
+
+html.light .yue {
+  --yue-c-code-bg: #bdbdbd !important;
+  --yue-c-code: #325e7b !important;
+  --yue-c-black: #11a1ff !important;
+}
+
+html.dark {
+  --syntax-dark-keyword: #009bff;
+  --syntax-dark-property: #85c7f2;
+}

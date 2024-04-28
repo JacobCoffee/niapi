@@ -1,0 +1,482 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>serialization - Docs</title>
+    <link rel="shortcut icon" href="../../_static/badge.svg"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="settings" href="settings.html" /><link rel="prev" title="schema" href="schema.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=f2d5353f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=73314dcc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="serialization"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="document"><div class="announcement">
+    <div class="announcement-inner">
+      <p>This documentation is currently under development.</p>
+      <button class="announcement-close" aria-label="Close announcement">
+        <i class="i-lucide close"></i>
+      </button>
+    </div>
+  </div><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="/">
+      <img class="light-logo" src="../../_static/badge.svg" alt="niapi" height="28" />
+      <img class="dark-logo" src="../../_static/badge.svg" alt="niapi" height="28" />
+      <strong>niapi</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://niapi.app/">
+            <span>Dashboard</span>
+            
+          </a>
+        </li><li class="link">
+          <a href="https://github.com/sponsors/JacobCoffee">
+            <span>Sponsor me</span>
+            
+          </a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+        
+<form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-socials flex items-center">
+    <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub">
+      <i class="i-simpleicons github"></i>
+    </a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)">
+    <i class="i-simpleicons x-twitter"></i>
+  </a>
+    <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord">
+      <i class="i-simpleicons discord"></i>
+    </a>
+</div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-lucide theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../usage/index.html">Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../asgi.html">asgi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli.html">cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata.html">metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain/init.html">Domain Initializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain/urls.html">urls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domain/web/index.html">web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../domain/web/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../domain/system/index.html">system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../domain/system/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../domain/calculator/index.html">calculator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../domain/calculator/controllers.html">controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domain/calculator/helpers.html">helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../domain/calculator/schema.html">schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cors.html">cors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openapi.html">openapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html">schema</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="static_files.html">static files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template.html">template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log/index.html">logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="log/controller.html">controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log/init.html">init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4">
+  <div class="localtoc">
+    <h3>On this page</h3>
+    <ul>
+<li><a class="reference internal" href="#app.lib.serialization.convert_datetime_to_gmt"><code class="docutils literal notranslate"><span class="pre">convert_datetime_to_gmt()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.convert_string_to_camel_case"><code class="docutils literal notranslate"><span class="pre">convert_string_to_camel_case()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.convert_camel_to_snake_case"><code class="docutils literal notranslate"><span class="pre">convert_camel_to_snake_case()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.from_json"><code class="docutils literal notranslate"><span class="pre">from_json()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.from_msgpack"><code class="docutils literal notranslate"><span class="pre">from_msgpack()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.to_json"><code class="docutils literal notranslate"><span class="pre">to_json()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.to_msgpack"><code class="docutils literal notranslate"><span class="pre">to_msgpack()</span></code></a></li>
+<li><a class="reference internal" href="#app.lib.serialization.UUIDEncoder"><code class="docutils literal notranslate"><span class="pre">UUIDEncoder</span></code></a><ul>
+<li><a class="reference internal" href="#app.lib.serialization.UUIDEncoder.default"><code class="docutils literal notranslate"><span class="pre">UUIDEncoder.default()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/JacobCoffee/niapi"
+  data-type="github" data-user="JacobCoffee" data-repo="niapi">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <i class="i-simpleicons github"></i>
+  </span>
+  <span class="flex-grow px-2">
+    <span>JacobCoffee/niapi</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <i class="i-lucide star"></i>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <i class="i-lucide git-fork"></i>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/JacobCoffee/niapi/blob/master/docs/api/lib/serialization.rst">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">niapi</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">API Reference</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">serialization</strong>
+        <meta itemprop="position" content="3" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <section id="serialization">
+<h1>serialization<a class="headerlink" href="#serialization" title="Link to this heading">¶</a></h1>
+<p>Application serialization utilities.</p>
+<p id="module-app.lib.serialization">NIAPI Serialization Helpers.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.convert_datetime_to_gmt">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">convert_datetime_to_gmt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><span class="pre">datetime</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#convert_datetime_to_gmt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.convert_datetime_to_gmt" title="Link to this definition">¶</a></dt>
+<dd><p>Handle datetime serialization for nested timestamps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dt</strong> – The datetime to convert</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The datetime converted to GMT</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.convert_string_to_camel_case">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">convert_string_to_camel_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#convert_string_to_camel_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.convert_string_to_camel_case" title="Link to this definition">¶</a></dt>
+<dd><p>Convert a string to camel case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> – The string to convert</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The string converted to camel case</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.convert_camel_to_snake_case">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">convert_camel_to_snake_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#convert_camel_to_snake_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.convert_camel_to_snake_case" title="Link to this definition">¶</a></dt>
+<dd><p>Convert a string to snake case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> – The string to convert</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The string converted to snake case</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.from_json">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#from_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.from_json" title="Link to this definition">¶</a></dt>
+<dd><p>Decode to an object with the optimized <a class="reference external" href="https://jcristharif.com/msgspec/index.html" title="(in msgspec)"><span class="xref std std-doc">msgspec</span></a> package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value to decode</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decoded value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.from_msgpack">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">from_msgpack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#from_msgpack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.from_msgpack" title="Link to this definition">¶</a></dt>
+<dd><p>Decode to an object with the optimized <a class="reference external" href="https://jcristharif.com/msgspec/index.html" title="(in msgspec)"><span class="xref std std-doc">msgspec</span></a> package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value to decode</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decoded value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.to_json">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#to_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.to_json" title="Link to this definition">¶</a></dt>
+<dd><p>Encode json with the optimized <a class="reference external" href="https://jcristharif.com/msgspec/index.html" title="(in msgspec)"><span class="xref std std-doc">msgspec</span></a> package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value to encode</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The encoded value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.lib.serialization.to_msgpack">
+<span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">to_msgpack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#to_msgpack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.to_msgpack" title="Link to this definition">¶</a></dt>
+<dd><p>Encode json with the optimized <a class="reference external" href="https://jcristharif.com/msgspec/index.html" title="(in msgspec)"><span class="xref std std-doc">msgspec</span></a> package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value to encode</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The encoded value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.lib.serialization.UUIDEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.lib.serialization.</span></span><span class="sig-name descname"><span class="pre">UUIDEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/app/lib/serialization.html#UUIDEncoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.UUIDEncoder" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">JSONEncoder</span></code></p>
+<p>JSON Encoder for UUIDs.</p>
+<p>Constructor for JSONEncoder, with sensible defaults.</p>
+<p>If skipkeys is false, then it is a TypeError to attempt
+encoding of keys that are not str, int, float or None.  If
+skipkeys is True, such items are simply skipped.</p>
+<p>If ensure_ascii is true, the output is guaranteed to be str
+objects with all incoming non-ASCII characters escaped.  If
+ensure_ascii is false, the output can contain non-ASCII characters.</p>
+<p>If check_circular is true, then lists, dicts, and custom encoded
+objects will be checked for circular references during encoding to
+prevent an infinite recursion (which would cause an RecursionError).
+Otherwise, no such check takes place.</p>
+<p>If allow_nan is true, then NaN, Infinity, and -Infinity will be
+encoded as such.  This behavior is not JSON specification compliant,
+but is consistent with most JavaScript based encoders and decoders.
+Otherwise, it will be a ValueError to encode such floats.</p>
+<p>If sort_keys is true, then the output of dictionaries will be
+sorted by key; this is useful for regression tests to ensure
+that JSON serializations can be compared on a day-to-day basis.</p>
+<p>If indent is a non-negative integer, then JSON array
+elements and object members will be pretty-printed with that
+indent level.  An indent level of 0 will only insert newlines.
+None is the most compact representation.</p>
+<p>If specified, separators should be an (item_separator, key_separator)
+tuple.  The default is (’, ‘, ‘: ‘) if <em>indent</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code> and
+(‘,’, ‘: ‘) otherwise.  To get the most compact JSON representation,
+you should specify (‘,’, ‘:’) to eliminate whitespace.</p>
+<p>If specified, default is a function that gets called for objects
+that can’t otherwise be serialized.  It should return a JSON encodable
+version of the object or raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.lib.serialization.UUIDEncoder.default">
+<span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></span><a class="reference internal" href="../../_modules/app/lib/serialization.html#UUIDEncoder.default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.lib.serialization.UUIDEncoder.default" title="Link to this definition">¶</a></dt>
+<dd><p>Handle UUIDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj</strong> – The object to encode</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The encoded object</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+        <button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button>
+        
+        <div class="navigation flex print:hidden">
+  <div class="navigation-prev">
+    <a href="schema.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span>
+        
+        <div class="title">schema</div>
+        
+      </div>
+    </a>
+  </div>
+  <div class="navigation-next">
+    <a href="settings.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">settings</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div>
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, Jacob Coffee</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub"><i class="i-simpleicons github"></i></a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)"><i class="i-simpleicons x-twitter"></i></a>
+  <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord"><i class="i-simpleicons discord"></i></a>
+  <a href="https://youtube.com/@monorepo" aria-label="YouTube"><i class="i-simpleicons youtube"></i></a>
+</div>
+    </div>
+  </div>
+</footer></div>
+      <script src="../../_static/documentation_options.js?v=1e5e4989"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/shibuya.js?v=5f0e4c24"></script>
+    
+</body>
+</html>

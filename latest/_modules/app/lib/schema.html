@@ -1,0 +1,304 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="../../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>app.lib.schema - Docs</title>
+    <link rel="shortcut icon" href="../../../_static/badge.svg"/><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/shibuya.css?v=f2d5353f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../../_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=73314dcc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="app.lib.schema"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="document"><div class="announcement">
+    <div class="announcement-inner">
+      <p>This documentation is currently under development.</p>
+      <button class="announcement-close" aria-label="Close announcement">
+        <i class="i-lucide close"></i>
+      </button>
+    </div>
+  </div><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="/">
+      <img class="light-logo" src="../../../_static/badge.svg" alt="niapi" height="28" />
+      <img class="dark-logo" src="../../../_static/badge.svg" alt="niapi" height="28" />
+      <strong>niapi</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://niapi.app/">
+            <span>Dashboard</span>
+            
+          </a>
+        </li><li class="link">
+          <a href="https://github.com/sponsors/JacobCoffee">
+            <span>Sponsor me</span>
+            
+          </a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+        
+<form class="searchbox flex items-center" action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-socials flex items-center">
+    <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub">
+      <i class="i-simpleicons github"></i>
+    </a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)">
+    <i class="i-simpleicons x-twitter"></i>
+  </a>
+    <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord">
+      <i class="i-simpleicons discord"></i>
+    </a>
+</div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-lucide theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/index.html">Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/asgi.html">asgi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cli.html">cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/metadata.html">metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/init.html">Domain Initializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/urls.html">urls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/web/index.html">web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/web/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/system/index.html">system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/system/controllers.html">controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/domain/calculator/index.html">calculator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/calculator/controllers.html">controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/calculator/helpers.html">helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/domain/calculator/schema.html">schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/cors.html">cors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/openapi.html">openapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/schema.html">schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/serialization.html">serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/settings.html">settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/static_files.html">static files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/template.html">template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/lib/log/index.html">logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/lib/log/controller.html">controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/lib/log/init.html">init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/lib/log/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/JacobCoffee/niapi"
+  data-type="github" data-user="JacobCoffee" data-repo="niapi">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <i class="i-simpleicons github"></i>
+  </span>
+  <span class="flex-grow px-2">
+    <span>JacobCoffee/niapi</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <i class="i-lucide star"></i>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <i class="i-lucide git-fork"></i>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../../index.html"><span itemprop="name">niapi</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">Module code</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">app.lib.schema</strong>
+        <meta itemprop="position" content="3" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <h1>Source code for app.lib.schema</h1><div class="highlight"><pre>
+<span></span><span data-line="1"><span class="sd">&quot;&quot;&quot;NIAPI Schema.&quot;&quot;&quot;</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+</span><span data-line="4">
+</span><span data-line="5"><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span> <span class="k">as</span> <span class="n">_BaseModel</span>
+</span><span data-line="6"><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">ConfigDict</span>
+</span><span data-line="7">
+</span><span data-line="8"><span class="kn">from</span> <span class="nn">app.utils</span> <span class="kn">import</span> <span class="n">camel_case</span>
+</span><span data-line="9">
+</span><span data-line="10"><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;BaseModel&quot;</span><span class="p">,</span> <span class="s2">&quot;CamelizedBaseModel&quot;</span><span class="p">]</span>
+</span><span data-line="11">
+</span><span data-line="12">
+<div class="viewcode-block" id="BaseModel">
+<a class="viewcode-back" href="../../../api/lib/schema.html#app.lib.schema.BaseModel">[docs]</a>
+</span><span data-line="13"><span class="k">class</span> <span class="nc">BaseModel</span><span class="p">(</span><span class="n">_BaseModel</span><span class="p">):</span>
+</span><span data-line="14"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Base Settings.&quot;&quot;&quot;</span>
+</span><span data-line="15">
+</span><span data-line="16">    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span>
+</span><span data-line="17">        <span class="n">validate_assignment</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span data-line="18">        <span class="n">from_attributes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span data-line="19">        <span class="n">use_enum_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span data-line="20">        <span class="n">arbitrary_types_allowed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span data-line="21">    <span class="p">)</span></div>
+
+</span><span data-line="22">
+</span><span data-line="23">
+<div class="viewcode-block" id="CamelizedBaseModel">
+<a class="viewcode-back" href="../../../api/lib/schema.html#app.lib.schema.CamelizedBaseModel">[docs]</a>
+</span><span data-line="24"><span class="k">class</span> <span class="nc">CamelizedBaseModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span><span data-line="25"><span class="w">    </span><span class="sd">&quot;&quot;&quot;Camelized Base pydantic schema.&quot;&quot;&quot;</span>
+</span><span data-line="26">
+</span><span data-line="27">    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">populate_by_name</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alias_generator</span><span class="o">=</span><span class="n">camel_case</span><span class="p">)</span></div>
+
+</span></pre></div>
+        </article>
+        <button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button>
+        
+        <div class="navigation flex print:hidden">
+  
+  
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, Jacob Coffee</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/JacobCoffee/niapi" aria-label="GitHub"><i class="i-simpleicons github"></i></a>
+  <a href="https://twitter.com/_scriptr" aria-label="X (Twitter)"><i class="i-simpleicons x-twitter"></i></a>
+  <a href="https://discord.gg/ZVG8hN6RrJ/" aria-label="Discord"><i class="i-simpleicons discord"></i></a>
+  <a href="https://youtube.com/@monorepo" aria-label="YouTube"><i class="i-simpleicons youtube"></i></a>
+</div>
+    </div>
+  </div>
+</footer></div>
+      <script src="../../../_static/documentation_options.js?v=1e5e4989"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/shibuya.js?v=5f0e4c24"></script>
+      <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+      <script>mermaid.initialize({startOnLoad:true});</script>
+    
+</body>
+</html>
